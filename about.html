@@ -88,3 +88,141 @@
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 16px;
+}
+
+.about-image {
+  flex: 1 1 45%;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-text,
+  .about-image {
+    flex: 1 1 100%;
+  }
+
+  .about-text h3 {
+    font-size: 28px;
+  }
+}
+
+#videos {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #f0f9ff, #e0e7ff);
+}
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.video-box {
+  flex: 1 1 45%;
+  max-width: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  aspect-ratio: 16/9;
+}
+
+.video-box:hover {
+  transform: scale(1.03);
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+
+  </style>
+</head>
+<body>
+<section>
+    <div class="header">
+        <nav>
+          <div class="nav-links">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="about.html">ABOUT</a></li>
+              <li><a href="jobseeker.html">JOB SEEKER</a></li>
+              <li><a href="employer.html">EMPLOYEE</a></li>
+              <li><a href="donate.html">DONATE</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+          </div>
+          <img src="photos/logo.jpeg" alt="AFF Logo" class="logo" />
+        </nav>
+      </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+ 
+<!-- About -->
+<section id="about" class="about-section">
+  <div class="about-container">
+    
+    <div class="about-text">
+      <h3>Who we Are</h3>
+      <p>
+        At Abled Fitness Foundation (AFF), we are committed to empowering people with disabilities to live with independence, dignity, and purpose. Through a holistic approach, we offer adaptive fitness programs, educational support, skill development, and resources for employment and entrepreneurship.
+      </p>
+      <p>
+        Our work is rooted in the Independent Living Philosophy and aligned with the UN Convention on the Rights of Persons with Disabilities. As proud associate members of ENIL (European Network on Independent Living), we’re part of a global movement advocating for equal rights and inclusion.
+      </p>
+      <p>
+        At AFF, we believe fitness is more than physical—it’s a powerful tool for breaking barriers, building confidence, and transforming lives. We’re creating a world where everyone is valued for their strength, resilience, and potential.
+      </p>
+    </div>
+
+    <div class="about-image">
+      <img src="photos/main pic.jpg" alt="Founder Nishanth Kumar Baddam" loading="lazy">
+    </div>
+
+  </div>
+</section>
+
+<section id="videos">
+  <div class="video-container">
+    <div class="video-box">
+      <video controls>
+        <source src="photos/WhatsApp Video 2025-04-09 at 12.29.41.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="video-box">
+      <video controls>
+        <source src="photos/InShot_20241225_073149892 (1).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</section>
+
+
+
