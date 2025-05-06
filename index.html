@@ -1,566 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abled Fitness Foundation | Empowering Lives</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
- 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
 
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-  html {
-    scroll-behavior: smooth;
-  }
-  .event-img {
-  width: 10rem; 
-  height: 20rem; 
-  object-fit: cover;
-}
-@media (max-width: 640px) {
-  .event-img {
-    width: 100%; 
-    height: auto;
-  }
-}
-.fade {
-      transition: opacity 1s ease-in-out;
-    }
-  
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5); 
-    border-radius: 50%;
-    padding: 10px;
-  }
-  .nav-link-active {
-    color: #16a34a !important;
-    font-weight: 600;
-    border-bottom: 2px solid #16a34a;
-  }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  
-  nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  .nav-link {
-    white-space: nowrap; 
-  }
-  @media (max-width: 768px) {
-    nav {
-      flex-wrap: nowrap; 
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-    }
-    nav::-webkit-scrollbar {
-      display: none; 
-    }
-    .nav-link {
-      font-size: 0.9rem; 
-      padding: 0 0.5rem; 
-    }
-  }
-</style>
-
-  
+  <title>ABLED FITNESS FOUNDATION</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
 </head>
-<body class="bg-white text-gray-800">
-  <!-- anni names heaading--> 
-  <header class="bg-white  sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-green-600">ABLED FITNESS FOUNDATION</h1>
-      <nav class="space-x-6">
-        <a href="#home" class="text-gray-600 hover:text-green-600 nav-link  ">Home</a>
-        <a href="#about" class="text-gray-600 hover:text-green-600 nav-link ">About</a>
-        <a href="#jobSeeker" class="text-gray-600 hover:text-green-600 nav-link">Jobseeker</a>
-        <a href="#employer" class="text-gray-600 hover:text-green-600 nav-link">Employer</a>
-        <a href="#donate" class="text-gray-600 hover:text-green-600 nav-link">Donate</a>
-        <a href="#contact" class="text-gray-600 hover:text-green-600 nav-link">Contact</a>
-      </nav>
-    </div>
-        </div>
-      </header>
+<body>
+
+ <section class="header">
+  <nav>
+    <a href="index.html"><img src="photos/logo.jpeg"></a>
+ <div class="nav-links" id="nav-links">
+  <i class="fa fa-times"  onclick="hideMenu()"></i>
+  <ul>
+    <li><a href = "">HOME<a></li>
+    <li><a href = "about.html">ABOUT</a></li>
+    <li><a href = "jobseeker.html">JOB SEEKER</a></li>
+    <li><a href = "employer.html">EMPLOYEE</a></li>
+    <li><a href = "donate.html">DONATE</a></li>
+    <li><a href = "contact.html">CONTACT</a></li>
+  </ul>
+ </div>
+ <i class="fa fa-bars" onclick="showMenu()" ></i>
+  </nav>
+  <div class="text-box">
+    <h1> ABLED FITNESS FOUNDATION</h1>
+    <p>
+      Welcome to the Abled Fitness Foundation – a beacon of empowerment<br> and health for individuals with disabilities.
+    </p>
+    <a href = "" class="hero-btn">Drag down for more</a>
+  </div>
+
+ </section>
+
+ <!--mission and vision-->
+ <section class="misvis">
+  <h1>
+    STRATEGIC INTENT
+  </h1>
     
-      <!-- Hero Section -->
-      <section id="home" class="bg-gradient-to-r from-white via-blue-50 to-white py-12 sm:py-16 px-4">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-6 sm:gap-8">
-          <div class="md:w-1/2 flex justify-center">
-            <img src="photos/logo.jpeg" alt="Abled Fitness Foundation Logo"
-              class="rounded-full w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 object-cover shadow-lg" />
-          </div>
-          <div class="md:w-1/2 text-center md:text-left">
-            <h2 class="text-3xl sm:text-4xl font-bold text-green-600">Abled Fitness Foundation</h2>
-            <p class="text-base sm:text-lg text-gray-700 mt-2 sm:mt-4">
-              Welcome to the Abled Fitness Foundation – a beacon of empowerment and health for individuals with disabilities.
-            </p>
-          </div>
+      <div class="row">
+        <div class="course-col">
+          <h3>
+            OUR MISSION
+          </h3>
+          <P>
+            To empower individuals with disabilities by fostering inclusivity, promoting equal opportunities, and providing access to education, healthcare, and skill development.
+          </P>
         </div>
-      </section>
-    
-     
-<section class="py-12 px-4">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-      <!-- Mission -->
-      <div class="bg-white shadow-md rounded-2xl p-6 hover:shadow-xl transition duration-300">
-        <div class="flex items-center mb-4">
-          <div class="bg-blue-100 p-3 rounded-full text-blue-600">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M13 16h-1v-4h-1m2-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
-            </svg>
-          </div>
-          <h3 class="text-lg sm:text-xl font-semibold ml-4">Our Mission</h3>
-        </div>
-        <p class="text-gray-600 text-sm sm:text-base">
-          To empower individuals with disabilities by fostering inclusivity, promoting equal opportunities, and providing access to education, healthcare, and skill development.
-        </p>
-      </div>
-      <!-- Vision -->
-      <div class="bg-white shadow-md rounded-2xl p-6 hover:shadow-xl transition duration-300">
-        <div class="flex items-center mb-4">
-          <div class="bg-green-100 p-3 rounded-full text-green-600">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M12 8c-1.333 0-4 .667-4 4s2.667 4 4 4 4-.667 4-4-2.667-4-4-4zm0 0V4m0 16v-4" />
-            </svg>
-          </div>
-          <h3 class="text-lg sm:text-xl font-semibold ml-4">Our Vision</h3>
-        </div>
-        <p class="text-gray-600 text-sm sm:text-base">
-          To create a future where every individual, regardless of ability, has access to fitness and wellness opportunities.
-        </p>
-      </div>
-    </div>
-    
-    <div class="mt-8">
-      <h3 class="text-3xl font-semibold text-blue-600 text-center mb-6">Our Events</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <!--  1 -->
-        <div class="overflow-hidden rounded-xl border-2 border-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 shadow-xl hover:shadow-2xl transition-all duration-300">
-          <img src="photos/event.jpeg" alt="Event 1"
-               class="w-full h-[550px] p-3 object-cover transform hover:scale-105 transition duration-300 ease-in-out"
-               loading="lazy">
-        </div>
-    
-        <!--2 -->
-        <div class="overflow-hidden rounded-xl border-2 border-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 shadow-xl hover:shadow-2xl transition-all duration-300">
-          <img src="photos/event (2).jpeg" alt="Event 2"
-               class="w-full h-[550px] p-3 object-cover transform hover:scale-105 transition duration-300 ease-in-out"
-               loading="lazy">
-        </div>
-    
-        <!--  3 -->
-        <div class="overflow-hidden rounded-xl border-2 border-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 shadow-xl hover:shadow-2xl transition-all duration-300">
-          <img src="photos/event 3.jpeg" alt="Event 3"
-               class="w-full h-[550px] p-3 object-cover transform hover:scale-105 transition duration-300 ease-in-out"
-               loading="lazy">
+
+        <div class="course-col">
+          <h3>
+           OUR VISION
+          </h3>
+          <P>
+            To create a future where every individual, regardless of ability, has access to fitness and wellness opportunities.
+          </P>
         </div>
       </div>
+ </section>
+
+
+
+
+
+
+
+
+
+ <section class="campus">
+  <div class="row">
+    <div class="campus-col">
+      <img src="photos/founder.jpg" alt="Founder Image">
     </div>
- 
-    <section id="testimonials" class="my-5">
-      <div class="container">
-        <h1 class="text-center mb-4 text-4xl md:text-5xl font-extrabold">Testimonials</h1>
-    
-        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner text-center bg-light rounded shadow p-5">
-    
-            <!-- Slide 1 -->
-            <div class="carousel-item active" data-bs-interval="5000">
-              <div class="d-flex flex-column align-items-center text-center px-3 px-md-5">
-                <p class="fs-5 fst-italic mb-4">
-                  “Abled Fitness Foundation played a vital role in my journey. With their help, I joined Kreavate Business Development Services as a Testing Associate, turning my aspirations into reality.”
-                </p>
-    
-                <div class="d-flex align-items-center justify-content-center gap-3">
-                  <img src="photos/WhatsApp Image 2025-04-09 at 12.29.42 (1).jpeg" alt="Sankara" class="rounded-circle" style="width: 60px; height: 60px; object-fit: cover;">
-                  <div class="text-start">
-                    <h6 class="mb-0 fw-bold">Sankara Varaprasad Sammeta</h6>
-                    <small class="text-muted">Visually Impaired | Testing Associate</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-    
-            <!-- Slide 2 -->
-            <div class="carousel-item" data-bs-interval="5000">
-              <div class="d-flex flex-column align-items-center text-center px-3 px-md-5">
-                <p class="fs-5 fst-italic mb-4">
-                  "I am incredibly grateful to Abled Fitness for their unwavering guidance and support for placement in Kreavate Business Development Services."
-                </p>
-    
-                <div class="d-flex align-items-center justify-content-center gap-3">
-                  <img src="photos/WhatsApp Image 2025-04-09 at 12.29.42.jpeg" alt="Moseen" class="rounded-circle" style="width: 60px; height: 60px; object-fit: cover;">
-                  <div class="text-start">
-                    <h6 class="mb-0 fw-bold">Moseen Ali</h6>
-                    <small class="text-muted">Visually Impaired | Testing Associate</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-    
-          </div>
-    
-          <!-- Controls -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-    </section>
-    
-   
-    <div class="flex justify-center mt-8">
-      <a href="gallery.html" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 sm:py-3 sm:px-8 rounded-xl transition duration-300">
-        Explore More Images
-      </a>
+    <div class="text-col">
+      <h1>FOUNDER AND DIRECTOR</h1>
+      <p>Abled Fitness Foundation is led by Nishanth Kumar Baddam, a passionate advocate for disability inclusion. As a person with a disability, he deeply understands the challenges faced by the community.</p>
+      <p>With a strong corporate background at companies like TATA, Cognizant, Google, Sutherland, and Amazon, Nishanth experienced firsthand the gaps in accessibility and support. This inspired him to create change.</p>
+      <p>Initially envisioning an adaptive fitness center for people with disabilities, Nishanth aimed to establish a specialized gym. Over time, his mission expanded into founding <strong>Abled Fitness Foundation</strong>, working toward a barrier-free society where individuals with disabilities can thrive independently.</p>
+      <p>Driven by personal experience and purpose, Nishanth is committed to creating equal opportunities for all.</p>
     </div>
+
+    
   </div>
 </section>
-   
-      <!-- About -->
-      <section id="about" class="py-12 sm:py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-          
-          <div>
-            <h3 class="text-2xl sm:text-5xl font-semibold mb-4 text-green-700">Who we Are</h3>
-            <p class="text-gray-700 text-sm sm:text-base mb-4">
-              At Abled Fitness Foundation (AFF), we are committed to empowering people with disabilities to live with independence, dignity, and purpose. Through a holistic approach, we offer adaptive fitness programs, educational support, skill development, and resources for employment and entrepreneurship.
-            </p>
-            <p class="text-gray-700 text-sm sm:text-base mb-4">
-              Our work is rooted in the Independent Living Philosophy and aligned with the UN Convention on the Rights of Persons with Disabilities. As proud associate members of ENIL (European Network on Independent Living), we’re part of a global movement advocating for equal rights and inclusion.
-
-            </p>
-            <p class="text-gray-700 text-sm sm:text-base">
-              
-At AFF, we believe fitness is more than physical—it’s a powerful tool for breaking barriers, building confidence, and transforming lives. We’re creating a world where everyone is valued for their strength, resilience, and potential.
-            </p>
-           
-          </div>
-          <div>
-            <img src="photos/main pic.jpg" class="rounded-xl shadow w-full h-auto" alt="Founder Nishanth Kumar Baddam" loading="lazy" />
-          </div>
-        </div>
-      </section>
 
 
 
-      <!--founder and head-->
-      <section id="about" class="py-12 sm:py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <img src="photos/founder.jpg" class="rounded-xl shadow w-full h-auto" alt="Founder Nishanth Kumar Baddam" loading="lazy" />
-          </div>
-          <div>
-            <h3 class="text-2xl sm:text-5xl font-semibold mb-4 text-green-700">Founder & Director</h3>
-            <p class="text-gray-700 text-sm sm:text-base mb-4">
-              Abled Fitness Foundation is led by Nishanth Kumar Baddam, a passionate advocate for disability inclusion. As a person with a disability, he deeply understands the challenges faced by the community.  
-            </p>
-            <p class="text-gray-700 text-sm sm:text-base mb-4">
-              With a strong corporate background at companies like TATA, Cognizant, Google, Sutherland, and Amazon, Nishanth experienced firsthand the gaps in accessibility and support. This inspired him to create change. 
-            </p>
-            <p class="text-gray-700 text-sm sm:text-base">
-              Initially envisioning an adaptive fitness center for people with disabilities, Nishanth aimed to establish a specialized gym. Over time, his mission expanded into founding **Abled Fitness Foundation, working toward a barrier-free society where individuals with disabilities can thrive independently.  
 
-            </p>
-            <p>
-              Driven by personal experience and purpose, Nishanth is committed to creating equal opportunities for all.
-            </p>
-          </div>
-        </div>
-      </section>
-    
-      <!-- Job Seeker -->
-      <section id="jobSeeker" class="py-12 sm:py-16 bg-gradient-to-br from-green-100 via-white to-green-200">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6">
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-green-700 mb-10">Job Seeker</h2>
-          <div class="bg-white/80 border border-green-300 rounded-3xl shadow-xl p-6 sm:p-8">
-            <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label class="block mb-1 text-sm font-semibold" for="candidate_name">Full Name</label>
-                <input id="candidate_name" type="text" name="candidate_name" placeholder="Enter your full name"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300" required>
-              </div>
-              <div>
-                <label class="block mb-1 text-sm font-semibold" for="candidate_email">Email</label>
-                <input id="candidate_email" type="email" name="candidate_email" placeholder="you@example.com"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300" required>
-              </div>
-              <div>
-                <label class="block mb-1 text-sm font-semibold" for="qualification">Qualification</label>
-                <input id="qualification" type="text" name="qualification" placeholder="e.g. B.Tech, M.Sc"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300" required>
-              </div>
-              <div>
-                <label class="block mb-1 text-sm font-semibold" for="experience">Experience</label>
-                <input id="experience" type="text" name="experience" placeholder="e.g. 1 year or Fresher"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300">
-              </div>
-              <div>
-                <label class="block mb-1 text-sm font-semibold" for="current_company">Current Company</label>
-                <input id="current_company" type="text" name="current_company" placeholder="Your current workplace"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300">
-              </div>
-              <div>
-                <label class="block mb-1 text-sm font-semibold" for="current_ctc">Current CTC</label>
-                <input id="current_ctc" type="text" name="current_ctc" placeholder="e.g. 4 LPA"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300">
-              </div>
-              <div>
-                <label class="block mb-1 text-sm font-semibold" for="expected_ctc">Expected CTC</label>
-                <input id="expected_ctc" type="text" name="expected_ctc" placeholder="e.g. 5 LPA"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300">
-              </div>
-              <div>
-                <label class="block mb-1 text-sm font-semibold" for="location">Preferred Location</label>
-                <input id="location" type="text" name="location" placeholder="Preferred job location"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300">
-              </div>
-              <div>
-                <label class="block mb-1 text-sm font-semibold" for="disability">Type of Disability</label>
-                <select id="disability" name="disability" class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300">
-                  <option value="low-vision">Low Vision</option>
-                  <option value="blindness">Blindness</option>
-                  <option value="locomotor-disability">Locomotor Disability</option>
-                  <option value="intellectual-disability">Intellectual Disability</option>
-                  <option value="dwarfism">Dwarfism</option>
-                  <option value="cerebral-palsy">Cerebral Palsy</option>
-                  <option value="hearing-impairment">Hearing Impairment</option>
-                  <option value="acid-attack-victim">Acid Attack Victim</option>
-                  <option value="spinal-cord-injury">Spinal Cord Injury</option>
-                </select>
-              </div>
-              <div class="md:col-span-2">
-                <label class="block mb-1 text-sm font-semibold" for="address">Address</label>
-                <textarea id="address" name="address" rows="3" placeholder="Your full address"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300" required></textarea>
-              </div>
-              <div class="md:col-span-2">
-                <label class="block mb-1 text-sm font-semibold" for="resume">Upload Resume</label>
-                <input id="resume" type="file" name="resume"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 bg-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-green-600 file:text-white hover:file:bg-green-700" required>
-              </div>
-              <div class="md:col-span-2 text-center">
-                <button type="submit"
-                  class="bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-3 rounded-full transition duration-300 hover:scale-105">
-                  Submit Application 🚀
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-    
-      <!-- Employer -->
-      <section id="employer" class="py-12 sm:py-16 bg-gradient-to-br from-green-100 via-white to-green-200">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6">
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-green-700 mb-10">Employer</h2>
-          <div class="bg-white/80 border border-green-300 rounded-3xl shadow-xl p-6 sm:p-8">
-            <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label class="block mb-1 text-sm font-semibold" for="full_name">Full Name</label>
-                <input id="full_name" type="text" name="full_name" placeholder="Enter your name"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300" required>
-              </div>
-              <div>
-                <label class="block mb-1 text-sm font-semibold" for="email">Email</label>
-                <input id="email" type="email" name="email" placeholder="you@company.com"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300" required>
-              </div>
-              <div>
-                <label class="block mb-1 text-sm font-semibold" for="company_name">Company Name</label>
-                <input id="company_name" type="text" name="company_name" placeholder="Your company name"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300" required>
-              </div>
-              <div>
-                <label class="block mb-1 text-sm font-semibold" for="designation">Your Designation</label>
-                <input id="designation" type="text" name="designation" placeholder="e.g. HR, Manager"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300" required>
-              </div>
-              <div>
-                <label class="block mb-1 text-sm font-semibold" for="job_role">Job Role</label>
-                <input id="job_role" type="text" name="job_role" placeholder="e.g. Frontend Developer"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300" required>
-              </div>
-              <div>
-                <label class="block mb-1 text-sm font-semibold" for="location">Location</label>
-                <input id="location" type="text" name="location" placeholder="e.g. Hyderabad"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300" required>
-              </div>
-              <div>
-                <label class="block mb-1 text-sm font-semibold" for="salary">Salary</label>
-                <input id="salary" type="text" name="salary" placeholder="e.g. 4-6 LPA"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300">
-              </div>
-              <div>
-                <label class="block mb-1 text-sm font-semibold" for="qualification_required">Qualification Required</label>
-                <input id="qualification_required" type="text" name="qualification_required" placeholder="e.g. B.Tech, M.Sc"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300">
-              </div>
-              <div>
-                <label class="block mb-1 text-sm font-semibold" for="disability_preference">Disability Preference</label>
-                <input id="disability_preference" type="text" name="disability_preference" placeholder="e.g. Hearing Impaired"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300">
-              </div>
-              <div class="md:col-span-2">
-                <label class="block mb-1 text-sm font-semibold" for="address">Address</label>
-                <textarea id="address" name="address" rows="3" placeholder="Company address"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-300" required></textarea>
-              </div>
-              <div class="md:col-span-2">
-                <label class="block mb-1 text-sm font-semibold" for="company_logo">Upload Company Logo</label>
-                <input id="company_logo" type="file" name="company_logo"
-                  class="w-full px-4 py-2 rounded-xl border border-gray-300 bg-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-green-600 file:text-white hover:file:bg-green-700">
-              </div>
-              <div class="md:col-span-2 text-center">
-                <button type="submit"
-                  class="bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-3 rounded-full transition duration-300 hover:scale-105">
-                  Post Job Opportunity ✅
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-    
-      <!-- Donate -->
-<section id="donate" class="py-12 px-4 bg-gray-100">
-  <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-green-500">
-    <h2 class="text-2xl sm:text-3xl font-bold text-green-600 mb-6 text-center">Support Us</h2>
-    <div class="space-y-3 text-sm sm:text-base text-gray-700">
-      <p><span class="font-semibold">Account No.:</span> 50220032218342</p>
-      <p><span class="font-semibold">IFSC Code:</span> BDBL0001624</p>
-      <p><span class="font-semibold">Account Holder:</span> ABLED FITNESS FOUNDATION</p>
-      <p><span class="font-semibold">Branch:</span> SECUNDERABAD, TELENGANA, 500003</p>
-      <p><span class="font-semibold">Phone No.:</span> +91 86860 43733</p>
-    </div>
-    <div class="mt-6 text-center">
-      <button onclick="openScanner()" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition duration-300">
-        Donate Now
-      </button>
 
-      <!-- Donation Modal -->
-      <div id="donateModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50 transition-opacity duration-300 opacity-0">
-        <div class="bg-white p-6 rounded-2xl max-w-sm text-center transform transition-transform duration-300 scale-90">
-          <h3 class="text-xl font-bold mb-4 text-green-600">Donate Now</h3>
-          
-         
-          <!-- User Details Form -->
-          <div id="userDetails" class="hidden">
-            <input type="text" id="name" placeholder="Your Name" class="w-full p-2 mb-4 border border-green-300 rounded">
-            <input type="text" id="phone" placeholder="Phone Number" class="w-full p-2 mb-4 border border-green-300 rounded">
-            <input type="text" id="transactionId" placeholder="Transaction ID" class="w-full p-2 mb-4 border border-green-300 rounded">
-            <button onclick="submitDonation()" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full">
-              Submit
-            </button>
-          </div>
 
-          <button onclick="closeModal()" class="text-sm text-green-700 underline mt-4">
-            Close
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-      <!-- Contact -->
-      <section id="contact" class="py-12 sm:py-20 bg-gradient-to-br from-green-50 via-white to-green-100">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6">
-          <div class="text-center mb-10">
-            <h3 class="text-3xl sm:text-4xl font-extrabold text-green-700 mb-4">Contact Us</h3>
-            <p class="text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">
-              Have questions or want to join us? Fill out the form below or email us directly.
-            </p>
-          </div>
-          <form class="grid gap-6 bg-white p-6 sm:p-8 rounded-2xl shadow-xl max-w-3xl mx-auto">
-            <div>
-              <label class="block mb-1 text-sm font-semibold" for="name">Name</label>
-              <input id="name" type="text" placeholder="Your Name"
-                class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500" required />
-            </div>
-            <div>
-              <label class="block mb-1 text-sm font-semibold" for="email">Email</label>
-              <input id="email" type="email" placeholder="Your Email"
-                class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500" required />
-            </div>
-            <div>
-              <label class="block mb-1 text-sm font-semibold" for="message">Message</label>
-              <textarea id="message" rows="5" placeholder="Your Message"
-                class="w-full px-4 py-2 border border-gray-300 rounded-xl resize-none focus:ring-2 focus:ring-green-500" required></textarea>
-            </div>
-            <button type="submit"
-              class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-xl transition duration-300">
-              📩 Send Message
-            </button>
-          </form>
-        </div>
-      </section>
-    
-      <!-- Footer -->
-      <footer class="bg-green-700 text-white text-center py-6">
-        <p>© 2025 Abled Fitness Foundation. All rights reserved.</p>
-        <div class="mt-2 flex justify-center gap-4">
-          <a href="#" class="hover:text-gray-200">Facebook</a>
-          <a href="#" class="hover:text-gray-200">Instagram</a>
-          <a href="#" class="hover:text-gray-200">LinkedIn</a>
-        </div>
-      </footer>
-      <script src="https://unpkg.com/jsqr/dist/jsQR.js"></script>
-    
-     
-      <script>
-        function toggleGallery() {
-          const gallery = document.getElementById('imageGallery');
-          if (gallery.classList.contains('hidden')) {
-            gallery.classList.remove('hidden');
-            startCrossfade();
-          } else {
-            gallery.classList.add('hidden');
-          }
-        }
-        function startCrossfade() {
-          if (intervalId) clearInterval(intervalId);
-          intervalId = setInterval(() => {
-            current = (current + 1) % slides.length;
-            showSlide(current);
-          }, 3000);
-        }
-        document.querySelector('#jobSeeker form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('candidate_name').value;
-    const email = document.getElementById('candidate_email').value;
-    if (!name || !email.match(/^\S+@\S+\.\S+$/)) {
-      alert('Please enter a valid name and email.');
-      return;
-    }
-    alert('Form submitted successfully!'); 
-  });
-  // Highlight active nav link
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function () {
-      // Remove active class from all links
-      document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('nav-link-active'));
-      // Add active class to clicked link
-      this.classList.add('nav-link-active');
-    });
-  });
-</script> 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    </body>
-    </html>
+
+
+
+
+<!-- Events Section -->
+<div class="events-section mt-8">
+  <h3 class="events-heading text-3xl font-semibold text-center mb-6">OUR EVENTS</h3>
   
+  <div class="events-grid">
+    <!-- Event 1 -->
+    <div class="event-card">
+      <img src="photos/event.jpeg" alt="Event 1" class="event-image" loading="lazy">
+    </div>
+
+    <!-- Event 2 -->
+    <div class="event-card">
+      <img src="photos/event (2).jpeg" alt="Event 2" class="event-image" loading="lazy">
+    </div>
+
+    <!-- Event 3 -->
+    <div class="event-card">
+      <img src="photos/event 3.jpeg" alt="Event 3" class="event-image" loading="lazy">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<section class="facilities">
+<h1>
+  Your support can change a life.  
+</h1>
+<p>
+  At Abled Fitness Foundation, we believe every person deserves the right to grow, work, and belong — regardless of ability.
+
+</p>
+<div class="row">
+  <div class="facilities-col">
+    <img src="photos/DEEPAK .png">
+    <h3> Deepak, therapy participant
+    </h3>
+    <p>
+      🧡 “Therapy helped me feel stronger — not just in my body, but in my mind too.”  
+
+    </p>
+  </div>
+  <div class="facilities-col">
+    <img src="photos/KISHORE.jpg">
+    <h3>Kishore, employed through Murugan Foods
+    </h3>
+    <p>
+      “I never thought I could work like this. Now I maintain a food stall and earn with pride.”  
+
+    </p>
+  </div>
+  <div class="facilities-col">
+    <img src="photos/GANESH.png">
+    <h3>Ganesh, fitness trainee & part-time worker
+    </h3>
+    <p>
+      “Coming here gave me energy, purpose, and friends who understand me.” 
+    </p>
+  </div>
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="testimonials">
+  <h1> ABILITY IN ACTION </h1>
+  <div class="row">
+    <div class="testimonial-col">
+      <img src="photos/ain pic.jpg
+    </div>
+  </div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  var navLinks= document.getElementById("navLinks");
+
+function showmenu(){
+  navLinks.style.right="0";
+}
+function hideMenu(){
+  navLinks.style.right="-200px";
+}
+
+</script>
+</body>
+</html>

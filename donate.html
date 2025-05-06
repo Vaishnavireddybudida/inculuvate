@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Abled Fitness Foundation</title>
+  <style>
+    .header {
+      height: 60%; 
+      width: 100%;
+      background-color: #fff;
+      position: relative;
+      border-bottom: 1px solid #ccc;
+    }
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction:row-reverse;
+    }
+    .logo{
+        height:100%;
+        width:120px;
+       
+    }
+    nav img {
+      width: 150px;
+    }
+    .nav-links {
+      flex: 1;
+      text-align: right;
+    }
+    .nav-links ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links ul li {
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+    }
+    .nav-links ul li a {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      font-size: 13px;
+      font-family: Arial, sans-serif;
+    }
+    .nav-links ul li::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #f44336;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+    .nav-links ul li:hover::after {
+      width: 100%;
+    }
+    #donate {
+  padding: 50px 20px;
+  background: #f8f9fa;
+}
+
+.donate-container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+}
+
+.donate-container h2 {
+  color: #4a4e69;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.donate-info p {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.donate-info strong {
+  color: #1f3c88;
+}
+
+.donate-button {
+  margin-top: 30px;
+}
+
+.donate-button button {
+  background-color: #1f3c88;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.donate-button button:hover {
+  background-color: #142b61;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .donate-container {
+    padding: 20px;
+  }
+
+  .donate-container h2 {
+    font-size: 26px;
+  }
+
+  .donate-info p {
+    font-size: 16px;
+  }
+
+  .donate-button button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+  </style>
+</head>
+<body>
+<section>
+    <div class="header">
+        <nav>
+          <div class="nav-links">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="about.html">ABOUT</a></li>
+              <li><a href="jobseeker.html">JOB SEEKER</a></li>
+              <li><a href="employer.html">EMPLOYEE</a></li>
+              <li><a href="donate.html">DONATE</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+          </div>
+          <img src="photos/logo.jpeg" alt="AFF Logo" class="logo" />
+        </nav>
+      </div>
+</section>
+ 
+<section id="donate">
+  <div class="donate-container">
+    <h2>Support Us</h2>
+    <div class="donate-info">
+      <p><strong>Account No.:</strong> 50220032218342</p>
+      <p><strong>IFSC Code:</strong> BDBL0001624</p>
+      <p><strong>Account Holder:</strong> ABLED FITNESS FOUNDATION</p>
+      <p><strong>Branch:</strong> SECUNDERABAD, TELANGANA, 500003</p>
+      <p><strong>Phone No.:</strong> +91 86860 43733</p>
+    </div>
+    <div class="donate-button">
+      <button>Donate Now</button>
+    </div>
+  </div>
+</section>
+
+
+    </html>

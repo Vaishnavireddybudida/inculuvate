@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ABLED FITNESS FOUNDATION</title>
+  <style>
+    .header {
+      height: 60%; 
+      width: 100%;
+      background-color: #fff;
+      position: relative;
+      border-bottom: 1px solid #ccc;
+    }
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction:row-reverse;
+    }
+    .logo{
+        height:100%;
+        width:120px;
+       
+    }
+    nav img {
+      width: 150px;
+    }
+    .nav-links {
+      flex: 1;
+      text-align: right;
+    }
+    .nav-links ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links ul li {
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+    }
+    .nav-links ul li a {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      font-size: 13px;
+      font-family: Arial, sans-serif;
+    }
+    .nav-links ul li::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #f44336;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+    .nav-links ul li:hover::after {
+      width: 100%;
+    }
+    /* Contact Section Styling */
+.contact {
+  padding: 50px 20px;
+  background-color: #f0f4f8;
+}
+
+.contact .heading {
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.contact .heading span {
+  color: #1f3c88;
+}
+
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.contact .image {
+  flex: 1 1 50%;
+  display:flex;
+  align-items:center;
+}
+
+.contact .image img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact form {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content:space-between;
+}
+
+.contact .box {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  resize: vertical;
+}
+
+.contact .box:focus {
+  border-color: #1f3c88;
+}
+
+.contact .btn {
+  background-color: #1f3c88;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact .btn:hover {
+  background-color: #142b61;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact .row {
+    flex-direction: column;
+  }
+
+  .contact .image img {
+    max-width: 100%;
+  }
+
+  .contact form {
+    width: 100%;
+  }
+}
+
+
+
+    
+
+  </style>
+</head>
+<body>
+<section>
+    <div class="header">
+        <nav>
+          <div class="nav-links">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="about.html">ABOUT</a></li>
+              <li><a href="jobseeker.html">JOB SEEKER</a></li>
+              <li><a href="employer.html">EMPLOYEE</a></li>
+              <li><a href="donate.html">DONATE</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+          </div>
+          <img src="photos/logo.jpeg" alt="AFF Logo" class="logo" />
+        </nav>
+      </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="contact" id="contact">
+  <h1 class="heading"><span>CONTACT</span> US</h1>
+  <div class="row">
+    <div class="image">
+      <img src="photos/ngo contact photo.jpg" alt="Contact Image">
+    </div>
+    <form action="">
+      <input type="text" placeholder="Name" class="box" required>
+      <input type="email" placeholder="Email" class="box" required>
+      <input type="number" placeholder="Phone Number" class="box" required>
+      <textarea placeholder="Your Message" class="box" cols="30" rows="10" required></textarea>
+      <input type="submit" value="Send Message" class="btn">
+    </form>
+  </div>
+</section>
+
+
+</body>
+</html>
+ 
+ 
+  
