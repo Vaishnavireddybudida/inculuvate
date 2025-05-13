@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>INCULUVATE</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(#eceffe, #ced6fb);
+    }
+
+    /* Header Section */
+   .header {
+  position: relative; /* Ensure it's in normal flow */
+  z-index: 1;
+}
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 5%;
+    }
+
+    /* Logo - align to left */
+    .logo {
+      height: 100%;
+      width: 120px;
+      object-fit: contain;
+      margin-right: 40px; /* Add some space if needed */
+    }
+
+    /* Navigation Links */
+    .nav-links {
+      text-align: right;
+      font-weight: bold;
+    }
+
+    .nav-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links ul li {
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+    }
+
+    .nav-links ul li a {
+      color: rgb(255, 253, 253);
+      text-decoration: none;
+      font-size: 13px;
+      font-family: Arial, sans-serif;
+    }
+
+    .nav-links ul li a:hover {
+      color: #f0c14b;
+    }
+
+    .nav-links ul li::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #f44336;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+
+    .nav-links ul li:hover::after {
+      width: 100%;
+    }
+  
+
+
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #d1fae5, #ffffff, #bbf7d0);
+}
+
+
+
+/* Decorative Background */
+.team-section {
+  position: relative;
+  padding: 80px 5% 100px;
+  background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+   background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  overflow: hidden;
+  text-align: center;
+  z-index: 1;
+}
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* Add decorative image */
+.team-section::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  z-index: 0;
+  width: 300px;
+  height: 300px;
+  background: #ffccbc;
+  top: -100px;
+  left: -80px;
+}
+
+/* Decorative Blobs */
+.team-section::before,
+.team-section::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.team-section::before {
+  width: 300px;
+  height: 300px;
+  background: #ffccbc;
+  top: -100px;
+  left: -80px;
+}
+
+.team-section::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  z-index: 0;
+  width: 300px;
+  height: 300px;
+  background: #b2dfdb;
+  bottom: -100px;
+  right: -80px;
+}
+
+/* Apply new font to the heading */
+.team-section h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 10px;
+  font-weight: bold; /* Make it bold */
+}
+.team-section .subtitle {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+/* Card Container */
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
+  gap: 25px;
+  justify-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Team Card Style */
+.team-card {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+   margin-bottom: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+  cursor: pointer;
+  max-width: 320px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.team-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  margin-bottom: 15px;
+}
+
+/* Texts */
+.team-card h3 {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #333;
+}
+
+.team-card .role {
+  font-weight: 700; /* Make it bold */
+  color: #444; /* Slightly darker for clarity */
+  font-family: 'Poppins', sans-serif; /* A clean, modern font */
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+/* Details Section (Hidden by default) */
+.team-card .details {
+  display: none;
+  margin-top: 12px;
+  font-size: 0.95rem;
+  text-align: left;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Open Class */
+.team-card.open .details {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Padding */
+@media (max-width: 480px) {
+  .team-section h2 {
+    font-size: 2rem;
+  }
+
+  .team-card {
+    padding: 18px;
+  }
+
+  .team-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .team-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .team-card .role {
+    font-size: 0.85rem;
+  }
+}
+
+/*wheelchair*/
+.decorative-wheelchair {
+  position: absolute;
+  background: url('photos/wheel chair.jpeg') no-repeat left;
+  background-size: 300px; /* Adjust as needed */
+  width: 300px;
+  height: 300px;
+  opacity: 0.08;
+  z-index: 0;
+  pointer-events: none;
+}
+/* Position at bottom-left */
+.decorative-wheelchair.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+/* Position at top-left */
+.decorative-wheelchair.top-left {
+  top: 0;
+  left: 0;
+}
+/*modal*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content img {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.modal-content h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.modal-content p {
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.modal-content .close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+/* internship available*/
+.internship-banner {
+  margin-top: 50px;
+  padding: 15px 25px;
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2px dashed #90caf9;
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+  </style>
+</head>
+<body>
+<section>
+    <div class="header">
+      <nav class="navbar">
+        <!-- Logo on the left -->
+        <img src="photos/main logo.png" alt="AFF Logo" class="logo" />
+
+        <!-- Navigation Links on the right -->
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="jobseeker.html">JOB SEEKER</a></li>
+            <li><a href="intern.html">INTERNSHIP</a></li>
+            <li><a href="employer.html">EMPLOYEE</a></li>
+            <li><a href="donate.html">DONATE</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+
+
+  <!-- Internship Roles Section -->
+<section class="team-section">
+  <div class="decorative-wheelchair bottom-left"></div>
+<div class="decorative-wheelchair top-left"></div>
+
+  <h2>Meet Our Interns</h2>
+  <p class="subtitle">Tap any card to view details</p>
+
+  <div class="team-container">
+        <!--1 slide -->
+<div class="team-card" onclick="toggleDetails(this)">
+      <img src="photos/deepak photo.png" alt="Avantika">
+      <h3>Deepak</h3>
+      <p class="role">Stall Maintainence</p>
+      <div class="details">
+        <p>“A train accident changed my life — I lost my leg in it. After that, I faced rejection after rejection from employers who only saw my disability, not my determination.But Murugan Food saw me differently.Now, I work a 4-hour shift and earn ₹300 a day. It’s not just about the money — it gives me dignity, confidence, and a sense of purpose. I feel seen, trusted, and finally have a way to give back to society.”</p>
+      </div>
+    </div>
+    <!--2 slide-->
+    <div class="team-card" onclick="toggleDetails(this)">
+      <img src="photos/yadamma .jpeg" alt="Avantika">
+      <h3>Yadamma</h3>
+      <p class="role">Testing Associate</p>
+      <div class="details">
+        <p>“I used to struggle with moving around, especially during the rainy season. My daily commute became nearly impossible because of my limited mobility.
+
+Then, the Abled Fitness Foundation stepped in. They gave me a much-needed wheelchair, and with it, I regained my independence.
+
+Now, I can go about my day without fear or dependence on others. Their support didn't just help me physically — it gave me confidence and dignity.
+
+I’m so grateful for people who support foundations like these. Because of their kindness, people like me are seen, supported, and given a real chance to live fully.”</p>
+      </div>
+    </div>
+    <!--3 slide-->
+    <div class="team-card" onclick="toggleDetails(this)">
+      <img src="photos/nthosh reddy photo.jpg" alt="Avantika">
+      <h3>Boyapally Santhosh</h3>
+      <p class="role">Testing Associate</p>
+      <div class="details">
+        <p>"Thanks to the Abled Fitness Foundation, I received a wheelchair that gave me freedom I had long lost. It helped me move independently and live with dignity. Their support means everything to me. I’m grateful for the care and kindness they showed."</p>
+      </div>
+    </div>
+
+    <!--4 slide-->
+    <div class="team-card" onclick="toggleDetails(this)">
+      <img src="photos/ajesh kamble.jpg" alt="Avantika">
+      <h3>Rajesh Kamble</h3>
+      <p class="role">Testing Associate</p>
+      <div class="details">
+        <p>Rajesh Kamble, a young boy from Mangar Basti, Secunderabad, was born with polio, which limited his mobility. With a custom-fitted wheelchair provided by the Abled Fitness Foundation, he gained the freedom to explore life independently. The foundation also guided his family to support his journey. Rajesh’s courage shows how small acts of kindness can lead to big transformations. Let's continue empowering more lives like his.</p>
+      </div>
+    </div>
+
+    <!--5 slide-->
+    <div class="team-card" onclick="toggleDetails(this)">
+      <img src="photos/kishore photo.jpg" alt="Avantika">
+      <h3>Kishore</h3>
+      <p class="role">Testing Associate</p>
+      <div class="details">
+        <p>Kishore, aged 43, faced a difficult life without schooling and trauma from an accident. Often overlooked, he received training and placement support from the organization. Now, he works in stall maintenance at Murugan Foods and runs a part-time evening job, gaining both income and confidence. His story reflects how the right support can lead to self-discovery and stability. Kishore proudly says, “I discovered stability—and myself.”</p>
+      </div>
+    </div>
+    
+    <!--6 slide-->
+    <div class="team-card" onclick="toggleDetails(this)">
+      <img src="photos/ganesh photo.jpg" alt="Avantika">
+      <h3>Ganesh</h3>
+      <p class="role">Testing Associate</p>
+      <div class="details">
+        <p>Ganesh, aged 45, suffered life-altering burns from an electric shock, leaving him jobless and fearful of rejection. With help from the Abled Fitness Foundation, he regained strength and purpose. Now employed at Murugan Foods in stall maintenance, he works 4.5 hours each evening and earns ₹300 per day. Ganesh’s journey is one of resilience, respect, and rediscovery. His story is proof that a second chance can lead to a new beginning.</p>
+      </div>
+    </div>
+
+    <!--7 slide-->
+    <div class="team-card" onclick="toggleDetails(this)">
+      <img src="photos/srinu photo.jpg" alt="Avantika">
+      <h3>Srinu</h3>
+      <p class="role">Testing Associate</p>
+      <div class="details">
+        <p>Another inspiring story from the Abled Fitness Foundation and Murugan Foods. A differently-abled individual who once faced rejection and uncertainty is now empowered through training and part-time employment. Thanks to daily stall maintenance work, they earn ₹300 each day and have regained confidence and self-worth. This transformation reflects the power of opportunity and community support.</p>
+      </div>
+    </div>
+
+    <!--8 slide
+    <div class="team-card" onclick="toggleDetails(this)">
+      <img src="photos/test 1.jpeg" alt="Avantika">
+      <h3>Sankara varaprasad sammeta</h3>
+      <p class="role">Testing Associate</p>
+      <div class="details">
+        <p>I am incredibly grateful to this platform for their unwavering guidance and support in securing my placement at Krevate Business Development Services. Their continuous mentorship, resources, and commitment to my professional growth have been instrumental in turning my aspirations into reality and helping me land this exciting opportunity.</p>
+      </div>
+    </div>-->
+
+
+    <!--  9 slide -->
+    <div class="team-card" onclick="toggleDetails(this)">
+      <img src="photos/intern.jpg" alt="Vaishnavi">
+      <h3> Budida Vaishnavi</h3>
+      <p class="role">Frontend Developer</p>
+      <div class="details">
+        <p>As a Frontend Developer, I specialize in creating responsive, user-friendly websites and web applications using HTML, CSS, JavaScript, and React.js. I focus on crafting intuitive user interfaces that provide seamless experiences across all devices. With a keen eye for design and detail, I strive to blend functionality with aesthetics. I am committed to writing clean, efficient code and staying up-to-date with the latest frontend technologies.</p>
+      </div>
+    </div>
+
+    <!--10 slide -->
+    <div class="team-card" onclick="toggleDetails(this)">
+      <img src="photos/avantika photo.jpg" alt="Avantika">
+      <h3>Avantika Prajapat</h3>
+      <p class="role">Content Creator</p>
+      <div class="details">
+        <p> As a Content Creator, I focus on producing engaging and informative content across various platforms. I specialize in crafting high-quality articles, blog posts, videos, and social media content that resonates with audiences. By researching trends and understanding user needs, I aim to deliver content that educates, entertains, and informs. I am dedicated to creating original, creative content that drives engagement and strengthens brand presence.</p>
+      </div>
+    </div>
+
+
+  </div>
+  <!--internships available-->
+  <div class="internship-banner">
+  🚀 Internships are <strong>Open</strong> — Apply Now!
+</div>
+
+</section>
+<!-- Modal -->
+<div id="teamModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modalImage" src="" alt="Team Member">
+    <h3 id="modalName"></h3>
+    <p id="modalRole"></p>
+    <div id="modalDetails"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+  const cards = document.querySelectorAll('.team-card');
+  const modal = document.getElementById('teamModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalName = document.getElementById('modalName');
+  const modalRole = document.getElementById('modalRole');
+  const modalDetails = document.getElementById('modalDetails');
+  const closeBtn = document.querySelector('.modal .close');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      modalImage.src = card.querySelector('img').src;
+      modalName.textContent = card.querySelector('h3').textContent;
+      modalRole.textContent = card.querySelector('.role').textContent;
+      modalDetails.innerHTML = card.querySelector('.details')?.innerHTML || '';
+      modal.style.display = 'block';
+    });
+  });
+
+  closeBtn.onclick = () => {
+    modal.style.display = 'none';
+  };
+
+  window.onclick = e => {
+    if (e.target == modal) {
+      modal.style.display = 'none';
+    }
+  };
+</script>
+
+
+
+
+
+
+
+  
+  
+</body>
+  </html>
