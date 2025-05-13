@@ -2,50 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Abled Fitness Foundation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>INCULUVATE</title>
   <style>
-    .header {
-      height: 60%; 
-      width: 100%;
-      background-color: #fff;
-      position: relative;
-      border-bottom: 1px solid #ccc;
-    }
-    nav {
-      display: flex;
-      padding: 2% 6%;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction:row-reverse;
-    }
-    .logo{
-        height:100%;
-        width:120px;
-       
-    }
-    nav img {
-      width: 150px;
-    }
-    .nav-links {
-      flex: 1;
-      text-align: right;
-    }
-    .nav-links ul {
-      list-style: none;
+    * {
       margin: 0;
       padding: 0;
+      font-family: 'Poppins', sans-serif;
     }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(#eceffe, #ced6fb);
+    }
+
+    /* Header Section */
+    .header {
+      min-height: 100vh;
+      width: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('photos/employee.png'); 
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 5%;
+    }
+
+    /* Logo - align to left */
+    .logo {
+      height: 100%;
+      width: 120px;
+      object-fit: contain;
+      margin-right: 20px; /* Add some space if needed */
+    }
+
+    /* Navigation Links */
+    .nav-links {
+      text-align: right;
+      font-weight: bold;
+    }
+
+    .nav-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
     .nav-links ul li {
       display: inline-block;
       padding: 8px 12px;
       position: relative;
     }
+
     .nav-links ul li a {
-      color: rgb(0, 0, 0);
+      color: rgb(255, 253, 253);
       text-decoration: none;
       font-size: 13px;
       font-family: Arial, sans-serif;
     }
+
+    .nav-links ul li a:hover {
+      color: #f0c14b;
+    }
+
     .nav-links ul li::after {
       content: '';
       width: 0%;
@@ -55,204 +82,39 @@
       margin: auto;
       transition: 0.5s;
     }
+
     .nav-links ul li:hover::after {
       width: 100%;
     }
-    .employer-section {
-  background: linear-gradient(to bottom right, #d1fae5, #ffffff, #bbf7d0);
-  padding: 60px 20px;
-}
-
-.employer-container {
-  max-width: 1000px;
-  margin: auto;
-}
-
-.employer-heading {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #065f46;
-  margin-bottom: 30px;
-  font-weight: bold;
-}
-
-.employer-form-wrapper {
-  background-color: rgba(255, 255, 255, 0.85);
-  border: 1px solid #86efac;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-.employer-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  font-weight: 600;
-  margin-bottom: 5px;
-  font-size: 0.95rem;
-}
-
-.form-group input,
-.form-group textarea {
-  padding: 10px 12px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  transition: border-color 0.3s;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #34d399;
-  outline: none;
-}
-
-.full-width {
-  grid-column: 1 / -1;
-}
-
-button[type="submit"] {
-  background-color: #059669;
-  color: white;
-  padding: 12px 24px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button[type="submit"]:hover {
-  background-color: #047857;
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-  .employer-form {
-    grid-template-columns: 1fr;
-  }
-}
-#employer {
-  padding: 60px 20px;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #4f46e5; /* Indigo-600 */
-  margin-bottom: 30px;
-}
-
-.form-card {
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 1px solid #c7d2fe;
-  border-radius: 24px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-}
-
-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.form-group {
-  flex: 1 1 calc(50% - 20px);
-  display: flex;
-  flex-direction: column;
-}
-
-.full-width {
-  flex: 1 1 100%;
-}
-
-label {
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="file"],
-textarea {
-  padding: 10px 15px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
-}
-
-input:focus,
-textarea:focus {
-  border-color: #6366f1;
-  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
-  outline: none;
-}
-
-textarea {
-  resize: vertical;
-}
-
-button {
-  background-color: #6366f1;
-  color: white;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 50px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-  background-color: #4f46e5;
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-  .form-group {
-    flex: 1 1 100%;
-  }
-}
-
-
   </style>
 </head>
 <body>
-<section>
+
+  <section>
     <div class="header">
-        <nav>
-          <div class="nav-links">
-            <ul>
-              <li><a href="index.html">HOME</a></li>
-              <li><a href="about.html">ABOUT</a></li>
-              <li><a href="jobseeker.html">JOB SEEKER</a></li>
-              <li><a href="employer.html">EMPLOYEE</a></li>
-              <li><a href="donate.html">DONATE</a></li>
-              <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-          </div>
-          <img src="photos/logo.jpeg" alt="AFF Logo" class="logo" />
-        </nav>
-      </div>
-</section>
+      <nav class="navbar">
+        <!-- Logo on the left -->
+        <img src="photos/main logo.png" alt="AFF Logo" class="logo" />
+
+        <!-- Navigation Links on the right -->
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="jobseeker.html">JOB SEEKER</a></li>
+            <li><a href="intern.html">INTERNSHIPS</a></li>
+            <li><a href="employer.html">EMPLOYEE</a></li>
+            <li><a href="donate.html">DONATE</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+</body>
+</html>
+
  
 
 

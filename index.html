@@ -2,95 +2,818 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Swiper.js CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <title>ABLED FITNESS FOUNDATION</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <title>INCULUVATE</title>
+  <style>
+
+
+    /*header*/
+    .header {
+      height: 60%; 
+      width: 100%;
+      background-color: #fff;
+      position: relative;
+      border-bottom: 1px solid #ccc;
+    }
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction:row-reverse;
+    }
+    .logo{
+        height:100%;
+        width:120px;
+        object-fit:contain;
+    }
+    nav img {
+      width: 150px;
+    }
+    .nav-links {
+      flex: 1;
+      text-align: right;
+      font-weight:bold;
+    }
+    .nav-links ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links ul li {
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+    }
+    .nav-links ul li a {
+     color: rgb(255, 253, 253);
+      text-decoration: none;
+      font-size: 13px;
+      font-family: Arial, sans-serif;
+    }
+    .nav-links ul li::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #f44336;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+    .nav-links ul li:hover::after {
+      width: 100%;
+    }
+    /* Dots Container */
+    .dots-container {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 3; /* Above slides */
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .dot.active {
+      background-color: #f0c14b;
+    }
+
+
+
+
+/* body*/
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #f0f9ff, #e0e7ff);
+}
+
+/* About Section */
+.about-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #e6f7ff, #ffffff);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative Circles */
+.about-section::before,
+.about-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(47, 133, 90, 0.1);
+  z-index: 0;
+}
+
+.about-section::before {
+  width: 200px;
+  height: 200px;
+  top: -50px;
+  left: -50px;
+}
+
+.about-section::after {
+  width: 300px;
+  height: 300px;
+  bottom: -100px;
+  right: -100px;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1 1 55%;
+}
+
+.about-text h1 {
+  font-size: 42px;
+  font-family: 'Merriweather', serif;
+  color: #2f855a;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.about-text p {
+  color: #4a4a4a;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.photo {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.photo img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation */
+.slide-in {
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-text,
+  .photo {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .about-text h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .about-text p {
+    text-align: center;
+  }
+}
+
+
+
+/* videos*/
+#videos {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f0f9ff, #e0e7ff);
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Decorative Circles */
+#videos::before,
+#videos::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(96, 165, 250, 0.1); /* light blue glow */
+  z-index: 0;
+}
+#videos::before {
+  width: 250px;
+  height: 250px;
+  top: -80px;
+  left: -80px;
+}
+#videos::after {
+  width: 300px;
+  height: 300px;
+  bottom: -100px;
+  right: -100px;
+}
+
+/* Container */
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Video Box */
+.video-box {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #000;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.video-box:hover {
+  transform: scale(1.05);
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 0;
+  object-fit: contain;
+}
+  
+
+/* Video Tag Styling */
+.video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+/* Responsive Padding */
+@media (max-width: 768px) {
+  #videos {
+    padding: 40px 16px;
+  }
+
+  .video-box {
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*about slides*/
+.slide-in {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+  /* Hidden initially */
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease-out;
+}
+
+.slide-in.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+h1 {
+  color: #4f46e5;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+
+/*testimonials*/
+.carousel-control-prev-icon,
+  .carousel-control-next-icon 
+  {
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+
+  /* Footer Styles */
+.footer {
+  background-color: #2d3748;
+  color: white;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.footer-box {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer-text {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.footer-small {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #4caf50;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+/*carousel customization*/
+/* Custom Carousel Arrows */
+button {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+button:focus {
+  outline: none;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.carousel-image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.dots-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #4caf50;
+}
+
+
+  </style>
 </head>
 <body>
+<section>
+    <div class="header">
+        <nav>
+          <div class="nav-links">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="about.html">ABOUT</a></li>
+              <li><a href="jobseeker.html">JOB SEEKER</a></li>
+               <li><a href="intern.html">INTERNSHIPS</a></li>
+              <li><a href="employer.html">EMPLOYEE</a></li>
+              <li><a href="donate.html">DONATE</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+          </div>
+          <img src="photos/main logo.png" alt="AFF Logo" class="logo" />
+        
+        </nav>
+      </div>
+</section>
 
- <section class="header">
-  <nav>
-    <a href="index.html"><img src="photos/logo.jpeg"></a>
- <div class="nav-links" id="nav-links">
-  <i class="fa fa-times"  onclick="hideMenu()"></i>
-  <ul>
-    <li><a href = "">HOME<a></li>
-    <li><a href = "about.html">ABOUT</a></li>
-    <li><a href = "jobseeker.html">JOB SEEKER</a></li>
-    <li><a href = "employer.html">EMPLOYEE</a></li>
-    <li><a href = "donate.html">DONATE</a></li>
-    <li><a href = "contact.html">CONTACT</a></li>
-  </ul>
- </div>
- <i class="fa fa-bars" onclick="showMenu()" ></i>
-  </nav>
-  <div class="text-box">
-    <h1> ABLED FITNESS FOUNDATION</h1>
-    <p>
-      Welcome to the Abled Fitness Foundation – a beacon of empowerment<br> and health for individuals with disabilities.
-    </p>
-    <a href = "" class="hero-btn">Drag down for more</a>
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+  <!-- About Section -->
+<section class="about-section">
+  <div class="about-container">
+    <div class="photo">
+      <img src="photos/founder.jpg" alt="Nishanth Kumar Baddam">
+    </div>
+    <div class="about-text slide-in">
+      <h1>Our Founder</h1>
+      <p>
+        Nishanth Kumar Baddam, founder of Abled Fitness Foundation, is a passionate advocate for disability inclusion with firsthand experience.
+        Inspired by challenges he faced both personally and professionally at companies like Google and Amazon, he launched the foundation to
+        promote accessibility and independence. What began as a vision for an adaptive gym has grown into a broader mission of social change.
+        Nishanth now leads efforts to create equal opportunities and foster a more inclusive, barrier-free society.
+      </p>
+    </div>
   </div>
+</section>
 
- </section>
 
- <!--mission and vision-->
- <section class="misvis">
-  <h1>
-    STRATEGIC INTENT
-  </h1>
+
+
+
+<section id="videos">
+  <div class="video-container">
     
-      <div class="row">
-        <div class="course-col">
-          <h3>
-            OUR MISSION
-          </h3>
-          <P>
-            To empower individuals with disabilities by fostering inclusivity, promoting equal opportunities, and providing access to education, healthcare, and skill development.
-          </P>
+    <div class="video-box">
+      <video controls>
+        <source src="photos/WhatsApp Video 2025-04-09 at 12.29.41.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="video-box">
+      <video controls>
+        <source src="photos/vide 1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- Mission Section using Tailwind CSS -->
+<section class="px-6 py-12 bg-pink-50 text-gray-800">
+  
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold text-purple-800 mb-4">Our Mission</h1>
+    <p class="text-xl mb-8 text-gray-700">To empower individuals with disabilities by fostering inclusivity, promoting equal opportunities, and providing access to education, healthcare, and skill development.</p>
+
+    <!-- Highlight Box 1 -->
+    <div class="bg-purple-100 border-l-4 border-purple-600 p-6 rounded-xl shadow-md mb-6">
+      <p class="text-lg font-medium text-purple-800">
+        Nishanth Kumar Baddam, founder of Abled Fitness Foundation, is a passionate advocate for disability inclusion with firsthand experience. Inspired by challenges he faced both personally and professionally at companies like Google and Amazon, he launched the foundation to promote accessibility and independence
+      </p>
+    </div>
+
+    <!-- Highlight Box 2 -->
+    <div class="bg-yellow-100 border-l-4 border-yellow-600 p-6 rounded-xl shadow-md">
+      <p class="text-lg font-medium text-yellow-800">
+        What began as a vision for an adaptive gym has grown into a broader mission of social change. Nishanth now leads efforts to create equal opportunities and foster a more inclusive, barrier-free society.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+  <!-- Alpine.js for carousel functionality -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+<!-- Carousel Section -->
+<section class="relative w-full max-w-6xl mx-auto mt-10 px-4 bg-grey-100 rounded-xl">
+
+  <div class="overflow-hidden relative rounded-xl shadow-xl"
+     x-data="{ activeSlide: 0, slides: ['photos/event 1.jpeg', 'photos/event (2).jpeg', 'photos/event 3.jpeg' ] }"
+     x-init="setInterval(() => activeSlide = (activeSlide + 1) % slides.length, 4000)">
+  
+  <template x-for="(slide, index) in slides" :key="index">
+    <div x-show="activeSlide === index"
+     x-transition:enter="transition ease-out duration-700"
+     x-transition:enter-start="opacity-0 scale-95"
+     x-transition:enter-end="opacity-100 scale-100"
+     class="w-full flex justify-center items-center min-h-[600px] bg-red-100 rounded-xl">
+ <img :src="slide" alt="Event Slide"
+     class="max-w-full max-h-[90vh] object-contain rounded-xl" />
+
+</div>
+
+  </template>
+    <!-- Arrows -->
+    <div class="absolute inset-0 flex items-center justify-between px-4">
+      <button @click="activeSlide = (activeSlide - 1 + slides.length) % slides.length"
+              class="bg-white/60 hover:bg-white text-black rounded-full p-2 shadow">
+        &#8592;
+      </button>
+      <button @click="activeSlide = (activeSlide + 1) % slides.length"
+              class="bg-white/60 hover:bg-white text-black rounded-full p-2 shadow">
+        &#8594;
+      </button>
+    </div>
+
+    <!-- Dots Indicator -->
+    <div class="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <template x-for="(slide, index) in slides" :key="index">
+        <div @click="activeSlide = index"
+             :class="{'bg-green-600': activeSlide === index, 'bg-gray-400': activeSlide !== index}"
+             class="w-3 h-3 rounded-full cursor-pointer transition-all duration-300">
+        </div>
+      </template>
+    </div>
+  </div>
+</section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="facilities">
+    <h1>Your support can change a life.</h1>
+    <p>
+      At Abled Fitness Foundation, we believe every person deserves the right to grow, work, and belong — regardless of ability.
+    </p>
+    <div class="row">
+      <div class="facilities-col">
+        <img src="photos/DEEPAK.png" alt="Deepak">
+        <h3>Deepak, therapy participant</h3>
+        <p>
+          🧡 “Therapy helped me feel stronger — not just in my body, but in my mind too.”
+        </p>
+      </div>
+      <div class="facilities-col">
+        <img src="photos/KISHORE.jpg" alt="Kishore">
+        <h3>Kishore, employed through Murugan Foods</h3>
+        <p>
+          “I never thought I could work like this. Now I maintain a food stall and earn with pride.”
+        </p>
+      </div>
+      <div class="facilities-col">
+        <img src="photos/GANESH.png" alt="Ganesh">
+        <h3>Ganesh, fitness trainee & part-time worker</h3>
+        <p>
+          “Coming here gave me energy, purpose, and friends who understand me.”
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--testimonials-->
+<section class="bg-gray-50 py-16 px-4" id="testimonials">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-green-600 mb-10">What People Say About Us</h2>
+
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide bg-white p-6 rounded-xl shadow-md text-left min-h-[280px] flex flex-col justify-between">
+          <p class="text-gray-700 italic mb-4">
+            “Having a job gave me confidence and helped me support my family. I feel proud every day.”
+
+          </p>
+          <div class="flex items-center gap-4 mt-4">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Radhika Sharma" class="w-12 h-12 rounded-full border-2 border-green-500 object-cover" />
+            <div>
+              <h4 class="font-semibold text-gray-800">Deepak</h4>
+              <p class="text-xs text-gray-500">stall maintenance worker</p>
+            </div>
+          </div>
         </div>
 
-        <div class="course-col">
-          <h3>
-           OUR VISION
-          </h3>
-          <P>
-            To create a future where every individual, regardless of ability, has access to fitness and wellness opportunities.
-          </P>
+        <!-- Slide 2 -->
+        <div class="swiper-slide bg-white p-6 rounded-xl shadow-md text-left min-h-[280px] flex flex-col justify-between">
+          <p class="text-gray-700 italic mb-4">
+           “I used to think no one would give me a chance. Now I work, I save, and I feel independent.”
+
+          </p>
+          <div class="flex items-center gap-4 mt-4">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Verma" class="w-12 h-12 rounded-full border-2 border-green-500 object-cover" />
+            <div>
+              <h4 class="font-semibold text-gray-800"> Srinu</h4>
+              <p class="text-xs text-gray-500">employed through Murugan Foods</p>
+            </div>
+          </div>
+        </div>
+
+    
+          <!-- Slide 3 -->
+        <div class="swiper-slide bg-white p-6 rounded-xl shadow-md text-left min-h-[280px] flex flex-col justify-between">
+          <p class="text-gray-700 italic mb-4">
+            “Working here changed everything for me. I’ve learned new skills and feel like I truly belong.”
+
+          </p>
+          <div class="flex items-center gap-4 mt-4">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Verma" class="w-12 h-12 rounded-full border-2 border-green-500 object-cover" />
+            <div>
+              <h4 class="font-semibold text-gray-800">Ganesh</h4>
+              <p class="text-xs text-gray-500">stall maintenance worker
+</p>
+            </div>
+          </div>
+        </div>
+          <!-- Slide 4 -->
+       <div class="swiper-slide bg-white p-6 rounded-xl shadow-md text-left min-h-[280px] flex flex-col justify-between">
+          <p class="text-gray-700 italic mb-4">
+           “Having a job gave me confidence and helped me support my family. I feel proud every day.”
+          </p>
+          <div class="flex items-center gap-4 mt-4">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Verma" class="w-12 h-12 rounded-full border-2 border-green-500 object-cover" />
+            <div>
+              <h4 class="font-semibold text-gray-800">Deepak</h4>
+              <p class="text-xs text-gray-500">Stall maintainance worker</p>
+            </div>
+          </div>
+        </div>
+          <!-- Slide 5 -->
+        <div class="swiper-slide bg-white p-6 rounded-xl shadow-md text-left min-h-[280px] flex flex-col justify-between">
+          <p class="text-gray-700 italic mb-4">
+            “I used to think no one would give me a chance. Now I work, I save, and I feel independent.”
+          </p>
+          <div class="flex items-center gap-4 mt-4">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Verma" class="w-12 h-12 rounded-full border-2 border-green-500 object-cover" />
+            <div>
+              <h4 class="font-semibold text-gray-800">Srinu</h4>
+              <p class="text-xs text-gray-500">employed through murugan foods</p>
+            </div>
+          </div>
+        </div>
+           <!-- Slide 6 -->
+       <div class="swiper-slide bg-white p-6 rounded-xl shadow-md text-left min-h-[280px] flex flex-col justify-between">
+          <p class="text-gray-700 italic mb-4">
+            “Working here changed everything for me. I’ve learned new skills and feel like I truly belong.”
+          </p>
+          <div class="flex items-center gap-4 mt-4">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Verma" class="w-12 h-12 rounded-full border-2 border-green-500 object-cover" />
+            <div>
+              <h4 class="font-semibold text-gray-800">ganesh</h4>
+              <p class="text-xs text-gray-500">Stall maintainace worker</p>
+            </div>
+          </div>
         </div>
       </div>
- </section>
 
+      </div>
 
-
-
-
-
-
-
-
- <section class="campus">
-  <div class="row">
-    <div class="campus-col">
-      <img src="photos/founder.jpg" alt="Founder Image">
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination mt-4"></div>
     </div>
-    <div class="text-col">
-      <h1>FOUNDER AND DIRECTOR</h1>
-      <p>Abled Fitness Foundation is led by Nishanth Kumar Baddam, a passionate advocate for disability inclusion. As a person with a disability, he deeply understands the challenges faced by the community.</p>
-      <p>With a strong corporate background at companies like TATA, Cognizant, Google, Sutherland, and Amazon, Nishanth experienced firsthand the gaps in accessibility and support. This inspired him to create change.</p>
-      <p>Initially envisioning an adaptive fitness center for people with disabilities, Nishanth aimed to establish a specialized gym. Over time, his mission expanded into founding <strong>Abled Fitness Foundation</strong>, working toward a barrier-free society where individuals with disabilities can thrive independently.</p>
-      <p>Driven by personal experience and purpose, Nishanth is committed to creating equal opportunities for all.</p>
-    </div>
-
-    
   </div>
 </section>
 
 
+   
 
 
 
@@ -100,101 +823,61 @@
 
 
 
-<!-- Events Section -->
-<div class="events-section mt-8">
-  <h3 class="events-heading text-3xl font-semibold text-center mb-6">OUR EVENTS</h3>
-  
-  <div class="events-grid">
-    <!-- Event 1 -->
-    <div class="event-card">
-      <img src="photos/event.jpeg" alt="Event 1" class="event-image" loading="lazy">
+
+
+
+
+
+
+
+
+ <!-- Footer Section -->
+ <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h2 class="footer-title">INCULUVATE</h2>
+      <p class="footer-text">Empowering differently-abled individuals through fitness and community support.</p>
+      <p class="footer-small">Reg. No: NGO/TS/2025/AF001</p>
     </div>
 
-    <!-- Event 2 -->
-    <div class="event-card">
-      <img src="photos/event (2).jpeg" alt="Event 2" class="event-image" loading="lazy">
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="jobseeker.html">JobSeeker</a></li>
+        <li><a href="employer.html">Employee</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
 
-    <!-- Event 3 -->
-    <div class="event-card">
-      <img src="photos/event 3.jpeg" alt="Event 3" class="event-image" loading="lazy">
+    <div class="footer-box">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:nishanthbaddam@aff.org.in">nishanthbaddam@aff.org.in</a></p>
+      <p>Phone: +91-8686043733</p>
+      <p>Hyderabad, Telangana, India</p>
     </div>
-  </div>
-</div>
 
-
-
-
-
-
-
-
-
-
-
-<section class="facilities">
-<h1>
-  Your support can change a life.  
-</h1>
-<p>
-  At Abled Fitness Foundation, we believe every person deserves the right to grow, work, and belong — regardless of ability.
-
-</p>
-<div class="row">
-  <div class="facilities-col">
-    <img src="photos/DEEPAK .png">
-    <h3> Deepak, therapy participant
-    </h3>
-    <p>
-      🧡 “Therapy helped me feel stronger — not just in my body, but in my mind too.”  
-
-    </p>
-  </div>
-  <div class="facilities-col">
-    <img src="photos/KISHORE.jpg">
-    <h3>Kishore, employed through Murugan Foods
-    </h3>
-    <p>
-      “I never thought I could work like this. Now I maintain a food stall and earn with pride.”  
-
-    </p>
-  </div>
-  <div class="facilities-col">
-    <img src="photos/GANESH.png">
-    <h3>Ganesh, fitness trainee & part-time worker
-    </h3>
-    <p>
-      “Coming here gave me energy, purpose, and friends who understand me.” 
-    </p>
-  </div>
-</div>
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="testimonials">
-  <h1> ABILITY IN ACTION </h1>
-  <div class="row">
-    <div class="testimonial-col">
-      <img src="photos/ain pic.jpg
+    <div class="footer-box">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/company/abled-fitness-foundation/" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        
+      </div>
     </div>
+
   </div>
 
+  <div class="footer-bottom">
+    &copy; 2025 Abled Fitness Foundation. All rights reserved.
+  </div>
+</footer>
 
 
-
-</section>
 
 
 
@@ -207,15 +890,51 @@
 
 
 <script>
-  var navLinks= document.getElementById("navLinks");
+  document.addEventListener('DOMContentLoaded', () => {
+  const slideElement = document.querySelector('.slide-in');
 
-function showmenu(){
-  navLinks.style.right="0";
-}
-function hideMenu(){
-  navLinks.style.right="-200px";
-}
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  observer.observe(slideElement);
+});
+
+/* testimonials*/
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
+
 
 </script>
 </body>
 </html>
+
+

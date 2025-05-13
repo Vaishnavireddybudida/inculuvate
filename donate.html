@@ -1,51 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Abled Fitness Foundation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <title>INCULUVATE - Donate</title>
   <style>
-    .header {
-      height: 60%; 
-      width: 100%;
-      background-color: #fff;
-      position: relative;
-      border-bottom: 1px solid #ccc;
-    }
-    nav {
-      display: flex;
-      padding: 2% 6%;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction:row-reverse;
-    }
-    .logo{
-        height:100%;
-        width:120px;
-       
-    }
-    nav img {
-      width: 150px;
-    }
-    .nav-links {
-      flex: 1;
-      text-align: right;
-    }
-    .nav-links ul {
-      list-style: none;
+    * {
       margin: 0;
       padding: 0;
+      font-family: 'Poppins', sans-serif;
     }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(#eceffe, #ced6fb);
+    }
+
+    /* Header Section */
+    .header {
+      min-height: 100vh;
+      width: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('photos/employee.png'); 
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 5%;
+    }
+
+    /* Logo - align to left */
+    .logo {
+      height: 100%;
+      width: 120px;
+      object-fit: contain;
+      margin-right: 20px; /* Add some space if needed */
+    }
+
+    /* Navigation Links */
+    .nav-links {
+      text-align: right;
+      font-weight: bold;
+    }
+
+    .nav-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
     .nav-links ul li {
       display: inline-block;
       padding: 8px 12px;
       position: relative;
     }
+
     .nav-links ul li a {
-      color: rgb(0, 0, 0);
+      color: rgb(255, 253, 253);
       text-decoration: none;
       font-size: 13px;
       font-family: Arial, sans-serif;
     }
+
+    .nav-links ul li a:hover {
+      color: #f0c14b;
+    }
+
     .nav-links ul li::after {
       content: '';
       width: 0%;
@@ -55,115 +81,169 @@
       margin: auto;
       transition: 0.5s;
     }
+
     .nav-links ul li:hover::after {
       width: 100%;
     }
+
+   
+    /* Donate Section */
     #donate {
-  padding: 50px 20px;
-  background: #f8f9fa;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+#donate::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('photos/donation_bg.jpg') no-repeat center center/cover;
+  filter: blur(10px);
+  z-index: 0;
+}
+#donate::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 180px; /* Adjust size as needed */
+  height: 180px;
+  background: url('photos/donate_corner.png') no-repeat bottom right;
+  background-size: contain;
+  opacity: 0.8; /* Adjust visibility */
+  z-index: 0;
 }
 
-.donate-container {
+
+  .donate-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border-radius: 12px;
+  padding: 30px;
   max-width: 600px;
   margin: auto;
-  background: #fff;
-  border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  text-align: center;
+   
 }
+    .donate-container h2 {
+      font-size: 32px;
+      margin-bottom: 25px;
+      color: #1f3c88;
+    }
 
-.donate-container h2 {
-  color: #4a4e69;
-  font-size: 32px;
-  margin-bottom: 25px;
+    .donate-info p {
+      font-size: 18px;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    .donate-info strong {
+      color: #0077cc;
+    }
+
+    .donate-button button {
+      background-color: #1f3c88;
+      color: white;
+      padding: 14px 30px;
+      margin-left:200px;
+      border: none;
+      border-radius: 25px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 20px;
+    }
+
+    .donate-button button:hover {
+      background-color: #0e265c;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links ul {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .donate-container {
+        padding: 25px 20px;
+      }
+
+      .donate-container h2 {
+        font-size: 26px;
+      }
+
+      .donate-info p {
+        font-size: 16px;
+      }
+
+      .donate-button button {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+
+      .blob1, .blob2 {
+        width: 200px;
+      }
+    }
+    .donate-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 180px; /* Adjust as needed */
+  height: auto;
+  z-index: 1;
+  border-radius: 10px; /* Optional for rounded edges */
 }
-
-.donate-info p {
-  font-size: 18px;
-  color: #333;
-  margin: 10px 0;
-}
-
-.donate-info strong {
-  color: #1f3c88;
-}
-
-.donate-button {
-  margin-top: 30px;
-}
-
-.donate-button button {
-  background-color: #1f3c88;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 25px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.donate-button button:hover {
-  background-color: #142b61;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .donate-container {
-    padding: 20px;
-  }
-
-  .donate-container h2 {
-    font-size: 26px;
-  }
-
-  .donate-info p {
-    font-size: 16px;
-  }
-
-  .donate-button button {
-    font-size: 16px;
-    padding: 10px 20px;
+@media (max-width: 768px) {
+  .donate-image {
+    width: 120px;
   }
 }
 
   </style>
 </head>
 <body>
-<section>
-    <div class="header">
-        <nav>
-          <div class="nav-links">
-            <ul>
-              <li><a href="index.html">HOME</a></li>
-              <li><a href="about.html">ABOUT</a></li>
-              <li><a href="jobseeker.html">JOB SEEKER</a></li>
-              <li><a href="employer.html">EMPLOYEE</a></li>
-              <li><a href="donate.html">DONATE</a></li>
-              <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-          </div>
-          <img src="photos/logo.jpeg" alt="AFF Logo" class="logo" />
-        </nav>
+
+  <section class="header">
+    <nav class="navbar">
+      <img src="photos/main logo.png" class="logo" alt="Logo">
+      <div class="nav-links">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="jobseeker.html">JOB SEEKER</a></li>
+          <li><a href="intern.html">INTERNSHIPS</a></li>
+          <li><a href="employer.html">EMPLOYEE</a></li>
+          <li><a href="donate.html">DONATE</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
       </div>
-</section>
- 
-<section id="donate">
-  <div class="donate-container">
-    <h2>Support Us</h2>
-    <div class="donate-info">
-      <p><strong>Account No.:</strong> 50220032218342</p>
-      <p><strong>IFSC Code:</strong> BDBL0001624</p>
-      <p><strong>Account Holder:</strong> ABLED FITNESS FOUNDATION</p>
-      <p><strong>Branch:</strong> SECUNDERABAD, TELANGANA, 500003</p>
-      <p><strong>Phone No.:</strong> +91 86860 43733</p>
-    </div>
-    <div class="donate-button">
-      <button>Donate Now</button>
-    </div>
-  </div>
-</section>
+    </nav>
+   
+  </section>
 
+  <section id="donate">
+    <div class="donate-container">
+      <h2>Support Us</h2>
+      <div class="donate-info">
+        <p><strong>Account No.:</strong> 50220032218342</p>
+        <p><strong>IFSC Code:</strong> BDBL0001624</p>
+        <p><strong>Account Holder:</strong> ABLED FITNESS FOUNDATION</p>
+        <p><strong>Branch:</strong> SECUNDERABAD, TELANGANA, 500003</p>
+        <p><strong>Phone No.:</strong> +91 86860 43733</p>
+      </div>
+      <div class="donate-button">
+        <button>Donate Now</button>
+      </div>
+    </div>
+    <img src="photos/donate backgroun dimage.jpeg" alt="Donate Illustration" class="donate-image">
 
-    </html>
+  </section>
+
+</body>
+</html>
