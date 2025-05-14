@@ -5,6 +5,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <!-- Swiper.js CDN -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -73,6 +74,11 @@
     .nav-links ul li:hover::after {
       width: 100%;
     }
+
+
+    
+
+
     /* Dots Container */
     .dots-container {
       position: absolute;
@@ -99,6 +105,8 @@
 
 
 
+
+    
 
 /* body*/
     body {
@@ -367,7 +375,7 @@ p {
   }
 
 
-  /* Footer Styles */
+/* Footer Styles */
 .footer {
   background-color: #2d3748;
   color: white;
@@ -492,6 +500,8 @@ button:focus {
           <img src="photos/main logo.png" alt="AFF Logo" class="logo" />
         
         </nav>
+         
+  
       </div>
 </section>
 
@@ -664,35 +674,65 @@ button:focus {
 
 
 
-  <section class="facilities">
-    <h1>Your support can change a life.</h1>
-    <p>
-      At Abled Fitness Foundation, we believe every person deserves the right to grow, work, and belong — regardless of ability.
-    </p>
-    <div class="row">
-      <div class="facilities-col">
-        <img src="photos/DEEPAK.png" alt="Deepak">
-        <h3>Deepak, therapy participant</h3>
-        <p>
-          🧡 “Therapy helped me feel stronger — not just in my body, but in my mind too.”
-        </p>
+ <section class="facilities">
+  <h1 class="text-4xl md:text-5xl font-bold text-center text-orange-600 font-[Merriweather] leading-snug">
+    Your support can change a life.
+  </h1>
+
+  <p>At Abled Fitness Foundation, we believe every person deserves the right to grow, work, and belong — regardless of ability.</p>
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide facilities-col">
+        <img src="photos/DEEPAK.png" alt="Deepak" class="facilities-img" />
+        <h3>Deepak, Stall Maintainence</h3>
+        <p>"They saw beyond my disability — and gave me back my purpose."</p>
       </div>
-      <div class="facilities-col">
-        <img src="photos/KISHORE.jpg" alt="Kishore">
+
+      <div class="swiper-slide facilities-col">
+        <img src="photos/event 5.jpg" alt="Kishore" class="facilities-img" />
         <h3>Kishore, employed through Murugan Foods</h3>
-        <p>
-          “I never thought I could work like this. Now I maintain a food stall and earn with pride.”
-        </p>
+        <p>“I never thought I could work like this. Now I maintain a food stall and earn with pride.”</p>
       </div>
-      <div class="facilities-col">
-        <img src="photos/GANESH.png" alt="Ganesh">
+
+      <div class="swiper-slide facilities-col">
+        <img src="photos/testimonial 1.png" alt="Ganesh" class="facilities-img" />
         <h3>Ganesh, fitness trainee & part-time worker</h3>
-        <p>
-          “Coming here gave me energy, purpose, and friends who understand me.”
-        </p>
+        <p>“Coming here gave me energy, purpose, and friends who understand me.”</p>
       </div>
+
+      <div class="swiper-slide facilities-col">
+        <img src="photos/DEEPAK.png" alt="Deepak" class="facilities-img" />
+        <h3>Deepak, therapy participant</h3>
+        <p>🧡 “Therapy helped me feel stronger — not just in my body, but in my mind too.”</p>
+      </div>
+
+      <div class="swiper-slide facilities-col">
+        <img src="photos/event 5.jpg" alt="Kishore" class="facilities-img" />
+        <h3>Kishore, employed through Murugan Foods</h3>
+        <p>“I never thought I could work like this. Now I maintain a food stall and earn with pride.”</p>
+      </div>
+
+      <div class="swiper-slide facilities-col">
+        <img src="photos/testimonial 1.png" alt="Ganesh" class="facilities-img" />
+        <h3>Ganesh, fitness trainee & part-time worker</h3>
+        <p>“Coming here gave me energy, purpose, and friends who understand me.”</p>
+      </div>
+
+      
+
     </div>
-  </section>
+
+    <!-- Swiper Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
 
 
 
@@ -722,7 +762,7 @@ button:focus {
 
           </p>
           <div class="flex items-center gap-4 mt-4">
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Radhika Sharma" class="w-12 h-12 rounded-full border-2 border-green-500 object-cover" />
+            <img src="photos/deepak photo.png" alt="Radhika Sharma" class="w-12 h-12 rounded-full border-2 border-green-500 object-cover" />
             <div>
               <h4 class="font-semibold text-gray-800">Deepak</h4>
               <p class="text-xs text-gray-500">stall maintenance worker</p>
@@ -737,7 +777,7 @@ button:focus {
 
           </p>
           <div class="flex items-center gap-4 mt-4">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Verma" class="w-12 h-12 rounded-full border-2 border-green-500 object-cover" />
+            <img src="photos/srinu photo.jpg" alt="Rahul Verma" class="w-12 h-12 rounded-full border-2 border-green-500 object-cover" />
             <div>
               <h4 class="font-semibold text-gray-800"> Srinu</h4>
               <p class="text-xs text-gray-500">employed through Murugan Foods</p>
@@ -753,7 +793,7 @@ button:focus {
 
           </p>
           <div class="flex items-center gap-4 mt-4">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Verma" class="w-12 h-12 rounded-full border-2 border-green-500 object-cover" />
+            <img src="photos/ganesh photo.jpg" alt="Rahul Verma" class="w-12 h-12 rounded-full border-2 border-green-500 object-cover" />
             <div>
               <h4 class="font-semibold text-gray-800">Ganesh</h4>
               <p class="text-xs text-gray-500">stall maintenance worker
@@ -767,7 +807,7 @@ button:focus {
            “Having a job gave me confidence and helped me support my family. I feel proud every day.”
           </p>
           <div class="flex items-center gap-4 mt-4">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Verma" class="w-12 h-12 rounded-full border-2 border-green-500 object-cover" />
+            <img src="photos/deepak photo.png" alt="Rahul Verma" class="w-12 h-12 rounded-full border-2 border-green-500 object-cover" />
             <div>
               <h4 class="font-semibold text-gray-800">Deepak</h4>
               <p class="text-xs text-gray-500">Stall maintainance worker</p>
@@ -780,7 +820,7 @@ button:focus {
             “I used to think no one would give me a chance. Now I work, I save, and I feel independent.”
           </p>
           <div class="flex items-center gap-4 mt-4">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Verma" class="w-12 h-12 rounded-full border-2 border-green-500 object-cover" />
+            <img src="photos/srinu photo.jpg" alt="Rahul Verma" class="w-12 h-12 rounded-full border-2 border-green-500 object-cover" />
             <div>
               <h4 class="font-semibold text-gray-800">Srinu</h4>
               <p class="text-xs text-gray-500">employed through murugan foods</p>
@@ -793,7 +833,7 @@ button:focus {
             “Working here changed everything for me. I’ve learned new skills and feel like I truly belong.”
           </p>
           <div class="flex items-center gap-4 mt-4">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Verma" class="w-12 h-12 rounded-full border-2 border-green-500 object-cover" />
+            <img src="photos/ganesh photo.jpg" alt="Rahul Verma" class="w-12 h-12 rounded-full border-2 border-green-500 object-cover" />
             <div>
               <h4 class="font-semibold text-gray-800">ganesh</h4>
               <p class="text-xs text-gray-500">Stall maintainace worker</p>
@@ -837,7 +877,7 @@ button:focus {
 
     <div class="footer-box">
       <h2 class="footer-title">INCULUVATE</h2>
-      <p class="footer-text">Empowering differently-abled individuals through fitness and community support.</p>
+      <p class="footer-text">Empowering differently-abled and community support.</p>
       <p class="footer-small">Reg. No: NGO/TS/2025/AF001</p>
     </div>
 
@@ -860,15 +900,18 @@ button:focus {
       <p>Hyderabad, Telangana, India</p>
     </div>
 
-    <div class="footer-box">
-      <h3>Follow Us</h3>
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/company/abled-fitness-foundation/" target="_blank">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        
-      </div>
-    </div>
+   <div class="footer-box">
+  <h3>Follow Us</h3>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/company/abled-fitness-foundation/" target="_blank" title="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="mailto:nishanthbaddam@aff.org.in" title="Gmail">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+</div>
+
 
   </div>
 
@@ -904,6 +947,10 @@ button:focus {
   observer.observe(slideElement);
 });
 
+
+
+
+
 /* testimonials*/
   const swiper = new Swiper(".mySwiper", {
     loop: true,
@@ -931,6 +978,16 @@ button:focus {
     },
   });
 
+
+
+
+
+
+
+
+
+
+ 
 
 
 </script>

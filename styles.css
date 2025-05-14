@@ -15,12 +15,31 @@ body {
 .header {
   min-height: 100vh;
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('photos/empowering.jpg');
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('photos/empowering.jpg');
-  
-  background-position: center;
+  background: url('photos/empowering.jpg'), url('photos/test 1.jpeg'), url('photos/empowering3.jpg');
+  background-position: 0% 0%, 50% 0%, 100% 0%; /* Fixed horizontal position */
   background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
+}
+
+
+/* Keyframes for Background Movement */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%, 50% 50%, 100% 100%;
+  }
+  25% {
+    background-position: 50% 50%, 100% 100%, 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%, 0% 0%, 50% 50%;
+  }
+  75% {
+    background-position: 0% 0%, 50% 50%, 100% 100%;
+  }
+  100% {
+    background-position: 50% 50%, 100% 100%, 0% 0%;
+  }
 }
 
 /* Navbar */
@@ -392,34 +411,57 @@ button:hover {
 
 
 
-  .facilities
-{
-width:80%;
-margin:auto;
-text-align:center;
-padding-top:100px;
-}
-.facilities-col
-{
-flex-basis:31%;
-border-radius:10px;
-margin-bottom:5%;
-text-align:left;
-
-}
-.facilities-col img{
-    width:100%;
-    border-radius: 10px;
-}
-.facilities-col p{
- padding:0;
-}
-.facilities-col h3{
-    margin-top:16px;
-    margin-bottom:15px;
-    text-align:left;
+.facilities {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding-top: 80px;
 }
 
+.facilities-col {
+  border-radius: 10px;
+  padding: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.facilities-img {
+  width: 100%;
+  height: 400px; /* Increase the height as needed */
+  object-fit: contain; /* Ensures the whole image is shown */
+  background-color: #fff; /* Fills the space around the image */
+  border-radius: 10px;
+}
+
+.facilities-col h3 {
+  margin: 16px 0 10px;
+  font-size: 18px;
+  color: #333;
+  text-align: left;
+}
+
+.facilities-col p {
+  font-size: 14px;
+  text-align: left;
+  color: #555;
+}
+
+.swiper {
+  padding: 30px 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #4caf50;
+}
+
+.swiper-pagination-bullet-active {
+  background: #4caf50;
+}
 
 
 
@@ -498,96 +540,5 @@ text-align:left;
 
 
 
-/*footer*/
 
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f9f9f9;
-  }
-  
-  .footer {
-    background-color: #1f1f1f;
-    color: #ccc;
-    padding: 40px 20px 20px;
-  }
-  
-  .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: auto;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  
-  .footer-box {
-    flex: 1 1 220px;
-    min-width: 200px;
-  }
-  
-  .footer-title {
-    color: #fff;
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .footer-box h3 {
-    color: #fff;
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .footer-box ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-box ul li {
-    margin-bottom: 8px;
-  }
-  
-  .footer-box ul li a,
-  .footer-box a {
-    color: #ccc;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  
-  .footer-box ul li a:hover,
-  .footer-box a:hover {
-    color: #fff;
-  }
-  
-  .footer-text {
-    font-size: 14px;
-    margin-bottom: 10px;
-    line-height: 1.5;
-  }
-  
-  .footer-small {
-    font-size: 12px;
-    color: #888;
-  }
-  
-  .social-icons a {
-    display: inline-block;
-    margin-right: 10px;
-    font-size: 18px;
-    color: #ccc;
-    transition: 0.3s;
-  }
-  
-  .social-icons a:hover {
-    color: #fff;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 13px;
-    color: #aaa;
-    border-top: 1px solid #333;
-    padding-top: 15px;
-  }
   

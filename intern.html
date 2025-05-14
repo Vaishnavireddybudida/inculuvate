@@ -21,10 +21,15 @@
     }
 
     /* Header Section */
-   .header {
-  position: relative; /* Ensure it's in normal flow */
-  z-index: 1;
-}
+  /* Header Section */
+    .header {
+      height: 60vh;
+      width: 100%;
+      background:  url('photos/internships.png'); 
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
 
     /* Navbar */
     .navbar {
@@ -382,6 +387,64 @@
 
 
 
+/*footer*/
+    /* Footer Styles */
+.footer {
+  background-color: #2d3748;
+  color: white;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.footer-box {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer-text {
+  font-size: 14px;
+  margin: 8px 0;
+  color:white;
+  
+}
+
+.footer-small {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #4caf50;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+
+
+
+
   </style>
 </head>
 <body>
@@ -466,7 +529,7 @@ I’m so grateful for people who support foundations like these. Because of thei
     <div class="team-card" onclick="toggleDetails(this)">
       <img src="photos/kishore photo.jpg" alt="Avantika">
       <h3>Kishore</h3>
-      <p class="role">Testing Associate</p>
+      <p class="role">Stall Maintainence</p>
       <div class="details">
         <p>Kishore, aged 43, faced a difficult life without schooling and trauma from an accident. Often overlooked, he received training and placement support from the organization. Now, he works in stall maintenance at Murugan Foods and runs a part-time evening job, gaining both income and confidence. His story reflects how the right support can lead to self-discovery and stability. Kishore proudly says, “I discovered stability—and myself.”</p>
       </div>
@@ -476,7 +539,7 @@ I’m so grateful for people who support foundations like these. Because of thei
     <div class="team-card" onclick="toggleDetails(this)">
       <img src="photos/ganesh photo.jpg" alt="Avantika">
       <h3>Ganesh</h3>
-      <p class="role">Testing Associate</p>
+      <p class="role">Stall Maintainence</p>
       <div class="details">
         <p>Ganesh, aged 45, suffered life-altering burns from an electric shock, leaving him jobless and fearful of rejection. With help from the Abled Fitness Foundation, he regained strength and purpose. Now employed at Murugan Foods in stall maintenance, he works 4.5 hours each evening and earns ₹300 per day. Ganesh’s journey is one of resilience, respect, and rediscovery. His story is proof that a second chance can lead to a new beginning.</p>
       </div>
@@ -486,7 +549,7 @@ I’m so grateful for people who support foundations like these. Because of thei
     <div class="team-card" onclick="toggleDetails(this)">
       <img src="photos/srinu photo.jpg" alt="Avantika">
       <h3>Srinu</h3>
-      <p class="role">Testing Associate</p>
+      <p class="role">Stall Maintainence</p>
       <div class="details">
         <p>Another inspiring story from the Abled Fitness Foundation and Murugan Foods. A differently-abled individual who once faced rejection and uncertainty is now empowered through training and part-time employment. Thanks to daily stall maintenance work, they earn ₹300 each day and have regained confidence and self-worth. This transformation reflects the power of opportunity and community support.</p>
       </div>
@@ -541,6 +604,58 @@ I’m so grateful for people who support foundations like these. Because of thei
     <div id="modalDetails"></div>
   </div>
 </div>
+
+
+
+
+ <!-- Footer Section -->
+ <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h2 class="footer-title">INCULUVATE</h2>
+      <p class="footer-text">Empowering differently-abled and community support.</p>
+      <p class="footer-small">Reg. No: NGO/TS/2025/AF001</p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="jobseeker.html">JobSeeker</a></li>
+        <li><a href="employer.html">Employee</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:nishanthbaddam@aff.org.in">nishanthbaddam@aff.org.in</a></p>
+      <p>Phone: +91-8686043733</p>
+      <p>Hyderabad, Telangana, India</p>
+    </div>
+
+   <div class="footer-box">
+  <h3>Follow Us</h3>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/company/abled-fitness-foundation/" target="_blank" title="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="mailto:nishanthbaddam@aff.org.in" title="Gmail">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+</div>
+
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 Abled Fitness Foundation. All rights reserved.
+  </div>
+</footer>
 
 
 

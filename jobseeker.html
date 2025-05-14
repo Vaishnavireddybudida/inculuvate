@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="stles.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <title>INCULUVATE</title>
@@ -20,14 +20,15 @@
     }
 
     /* Header Section */
-    .header {
-      height: 60vh;
-      width: 100%;
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('photos/job seeker.png'); 
-      background-position: center;
-      background-size: cover;
-      position: relative;
-    }
+  .header {
+  min-height: 100vh;
+  width: 100%;
+  background: url('photos/job seeker.png');
+  background-position: 0% 0%, 50% 0%, 100% 0%; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
 
     /* Navbar */
     .navbar {
@@ -97,6 +98,181 @@
 }
 
 
+
+
+
+#jobseeker .container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#jobseeker .container:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.3);
+}
+
+#jobseeker h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #333;
+}
+
+#jobseeker .form-card form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#jobseeker .form-group {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+#jobseeker .form-group.full-width {
+  flex: 1 1 100%;
+}
+
+#jobseeker label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+#jobseeker input,
+#jobseeker select,
+#jobseeker textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+#jobseeker textarea {
+  resize: vertical;
+}
+
+.send {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.send:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 600px) {
+  #jobseeker .form-group {
+    flex: 1 1 100%;
+  }
+
+  .send {
+    width: 100%;
+    align-self: stretch;
+  }
+}
+.fixed-send {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 14px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 999;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fixed-send:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+
+
+@media (max-width: 600px) {
+  .send {
+    width: 100%;
+  }
+}
+
+
+
+
+
+/*footer*/
+    /* Footer Styles */
+.footer {
+  background-color: #2d3748;
+  color: white;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.footer-box {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer-text {
+  font-size: 14px;
+  margin: 8px 0;
+  color:white;
+  
+}
+
+.footer-small {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #4caf50;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+
   </style>
 </head>
 <body>
@@ -121,6 +297,169 @@
       </nav>
     </div>
   </section>
+
+
+
+
+
+
+
+<section id="jobseeker">
+  <div class="container">
+    <h2>Job Seeker Registration</h2>
+    <div class="form-card">
+      <form>
+        <div class="form-group">
+          <label for="candidate_name">Candidate Name</label>
+          <input id="candidate_name" type="text" name="candidate_name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="candidate_email">Candidate Email</label>
+          <input id="candidate_email" type="email" name="candidate_email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="qualification">Qualification</label>
+          <input id="qualification" type="text" name="qualification" placeholder="e.g. B.Tech, M.Sc" required>
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Experience (in years)</label>
+          <input id="experience" type="number" name="experience" min="0" placeholder="e.g. 2">
+        </div>
+
+        <div class="form-group">
+          <label for="current_company">Current Company</label>
+          <input id="current_company" type="text" name="current_company" placeholder="e.g. Infosys">
+        </div>
+
+        <div class="form-group">
+          <label for="current_ctc">Current CTC (in LPA)</label>
+          <input id="current_ctc" type="text" name="current_ctc" placeholder="e.g. 5 LPA">
+        </div>
+
+        <div class="form-group">
+          <label for="expected_ctc">Expected CTC (in LPA)</label>
+          <input id="expected_ctc" type="text" name="expected_ctc" placeholder="e.g. 6.5 LPA">
+        </div>
+
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input id="location" type="text" name="location" placeholder="e.g. Hyderabad">
+        </div>
+
+        <div class="form-group full-width">
+          <label for="disability_type">Type of Disability</label>
+          <select id="disability_type" name="disability_type" required>
+            <option value="">Select Disability</option>
+            <option>Low Vision</option>
+            <option>Blindness</option>
+            <option>Locomotor Disability</option>
+            <option>Dwarfism</option>
+            <option>Intellectual Disability</option>
+            <option>Cerebral Palsy</option>
+            <option>Hearing Impairment</option>
+            <option>Acid Attack Victim</option>
+            <option>Spinal Cord Injury</option>
+          </select>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows="4" placeholder="Enter full address..."></textarea>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="resume">Upload Resume</label>
+          <input id="resume" type="file" name="resume" required>
+        </div>
+
+        <div class="form-group full-width">
+         
+        </div>
+      </form>
+    </div>
+<button type="submit" class="send">Send</button>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ <!-- Footer Section -->
+ <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h2 class="footer-title">INCULUVATE</h2>
+      <p class="footer-text">Empowering differently-abled and community support.</p>
+      <p class="footer-small">Reg. No: NGO/TS/2025/AF001</p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="jobseeker.html">JobSeeker</a></li>
+        <li><a href="employer.html">Employee</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:nishanthbaddam@aff.org.in">nishanthbaddam@aff.org.in</a></p>
+      <p>Phone: +91-8686043733</p>
+      <p>Hyderabad, Telangana, India</p>
+    </div>
+
+   <div class="footer-box">
+  <h3>Follow Us</h3>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/company/abled-fitness-foundation/" target="_blank" title="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="mailto:nishanthbaddam@aff.org.in" title="Gmail">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+</div>
+
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 Abled Fitness Foundation. All rights reserved.
+  </div>
+</footer>
+
+
+
 
 
 
