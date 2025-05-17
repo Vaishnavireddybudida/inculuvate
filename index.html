@@ -57,9 +57,9 @@
       position: relative;
     }
     .nav-links ul li a {
-     color: rgb(255, 253, 253);
+     color: rgb(0, 0, 0);
       text-decoration: none;
-      font-size: 13px;
+      font-size: 16px;
       font-family: Arial, sans-serif;
     }
     .nav-links ul li::after {
@@ -597,10 +597,10 @@ button:focus {
 
 
 
-  <!-- Alpine.js for carousel functionality -->
+  <!-- Alpine.js for carousel functionality 
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
-<!-- Carousel Section -->
+<!-- Carousel Section 
 <section class="relative w-full max-w-6xl mx-auto mt-10 px-4 bg-grey-100 rounded-xl">
 
   <div class="overflow-hidden relative rounded-xl shadow-xl"
@@ -619,7 +619,7 @@ button:focus {
 </div>
 
   </template>
-    <!-- Arrows -->
+    <!-- Arrows
     <div class="absolute inset-0 flex items-center justify-between px-4">
       <button @click="activeSlide = (activeSlide - 1 + slides.length) % slides.length"
               class="bg-white/60 hover:bg-white text-black rounded-full p-2 shadow">
@@ -631,7 +631,7 @@ button:focus {
       </button>
     </div>
 
-    <!-- Dots Indicator -->
+    <!-- Dots Indicator 
     <div class="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-2">
       <template x-for="(slide, index) in slides" :key="index">
         <div @click="activeSlide = index"
@@ -642,6 +642,8 @@ button:focus {
     </div>
   </div>
 </section>
+-->
+
     
 
 
@@ -685,12 +687,34 @@ button:focus {
     <div class="swiper-wrapper">
 
       <div class="swiper-slide facilities-col">
-        <img src="photos/DEEPAK.png" alt="Deepak" class="facilities-img" />
+        <img src="photos/deepak.jpg" alt="Deepak" class="facilities-img" />
         <h3>Deepak, Stall Maintainence</h3>
         <p>"They saw beyond my disability — and gave me back my purpose."</p>
       </div>
 
       <div class="swiper-slide facilities-col">
+        <img src="photos/kishore.jpg" alt="Kishore" class="facilities-img" />
+        <h3>Kishore, employed through Murugan Foods</h3>
+        <p>“I never thought I could work like this. Now I maintain a food stall and earn with pride.”</p>
+      </div>
+
+      <div class="swiper-slide facilities-col">
+        <img src="photos/ganesh .jpg" alt="Ganesh" class="facilities-img" />
+        <h3>Ganesh, fitness trainee & part-time worker</h3>
+        <p>“Coming here gave me energy, purpose, and friends who understand me.”</p>
+      </div>
+
+      <div class="swiper-slide facilities-col">
+       <video class="facilities-img" controls>
+  <source src="photos/srinu.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+        <h3>Srinu,</h3>
+        <p>Ability isn't Mobility</p>
+      </div>
+<!---
+      <div class="swiper-slide facilities-col">
         <img src="photos/event 5.jpg" alt="Kishore" class="facilities-img" />
         <h3>Kishore, employed through Murugan Foods</h3>
         <p>“I never thought I could work like this. Now I maintain a food stall and earn with pride.”</p>
@@ -701,24 +725,7 @@ button:focus {
         <h3>Ganesh, fitness trainee & part-time worker</h3>
         <p>“Coming here gave me energy, purpose, and friends who understand me.”</p>
       </div>
-
-      <div class="swiper-slide facilities-col">
-        <img src="photos/DEEPAK.png" alt="Deepak" class="facilities-img" />
-        <h3>Deepak, therapy participant</h3>
-        <p>🧡 “Therapy helped me feel stronger — not just in my body, but in my mind too.”</p>
-      </div>
-
-      <div class="swiper-slide facilities-col">
-        <img src="photos/event 5.jpg" alt="Kishore" class="facilities-img" />
-        <h3>Kishore, employed through Murugan Foods</h3>
-        <p>“I never thought I could work like this. Now I maintain a food stall and earn with pride.”</p>
-      </div>
-
-      <div class="swiper-slide facilities-col">
-        <img src="photos/testimonial 1.png" alt="Ganesh" class="facilities-img" />
-        <h3>Ganesh, fitness trainee & part-time worker</h3>
-        <p>“Coming here gave me energy, purpose, and friends who understand me.”</p>
-      </div>
+    -->
 
       
 
