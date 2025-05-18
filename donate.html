@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-  <title>INCULUVATE - Donate</title>
+ <title>INCLUVATE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     * {
       margin: 0;
@@ -86,127 +87,53 @@
       width: 100%;
     }
 
+
+
+
+
+ body {
+      background: linear-gradient(135deg, #f9fafb 25%, #f3e8ff 75%);
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
    
-    /* Donate Section */
-    #donate {
-  padding: 60px 20px;
-  position: relative;
-  overflow: hidden;
-}
-#donate::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('photos/donation_bg.jpg') no-repeat center center/cover;
-  filter: blur(10px);
-  z-index: 0;
-}
-#donate::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 180px; /* Adjust size as needed */
-  height: 180px;
-  background: url('photos/donate_corner.png') no-repeat bottom right;
-  background-size: contain;
-  opacity: 0.8; /* Adjust visibility */
-  z-index: 0;
-}
-
-
-  .donate-container {
-  position: relative;
-  z-index: 1;
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-  border-radius: 12px;
-  padding: 30px;
-  max-width: 600px;
-  margin: auto;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+     
+    .decor-circle {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.3;
+      z-index: 0;
+      pointer-events: none;
+    }
    
-}
-    .donate-container h2 {
-      font-size: 32px;
-      margin-bottom: 25px;
-      color: #1f3c88;
+    .decor-blob {
+      position: absolute;
+      opacity: 0.2;
+      filter: blur(40px);
+      z-index: 0;
+      pointer-events: none;
+      transform-origin: center;
     }
 
-    .donate-info p {
-      font-size: 18px;
-      margin: 10px 0;
-      color: #333;
-    }
-
-    .donate-info strong {
-      color: #0077cc;
-    }
-
-    .donate-button button {
-      background-color: #1f3c88;
-      color: white;
-      padding: 14px 30px;
-      margin-left:200px;
-      border: none;
-      border-radius: 25px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: background 0.3s;
-      margin-top: 20px;
-    }
-
-    .donate-button button:hover {
-      background-color: #0e265c;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .nav-links ul {
-        flex-direction: column;
-        align-items: flex-end;
-      }
-
-      .donate-container {
-        padding: 25px 20px;
-      }
-
-      .donate-container h2 {
-        font-size: 26px;
-      }
-
-      .donate-info p {
-        font-size: 16px;
-      }
-
-      .donate-button button {
-        font-size: 16px;
-        padding: 10px 20px;
-      }
-
-      .blob1, .blob2 {
-        width: 200px;
-      }
-    }
-    .donate-image {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 180px; /* Adjust as needed */
-  height: auto;
-  z-index: 1;
-  border-radius: 10px; /* Optional for rounded edges */
-}
-@media (max-width: 768px) {
-  .donate-image {
-    width: 120px;
-  }
-}
 
 
-/*footer*/
+
+
+
+
+
+
+   
+   
+
+  
+
+
+
+
+/*footerr*/
     /* Footer Styles */
 .footer {
   background-color: #2d3748;
@@ -261,6 +188,7 @@
 }
 
 
+
   </style>
 </head>
 <body>
@@ -274,7 +202,7 @@
           <li><a href="about.html">ABOUT</a></li>
           <li><a href="jobseeker.html">JOB SEEKER</a></li>
           <li><a href="intern.html">INTERNSHIPS</a></li>
-          <li><a href="employer.html">EMPLOYEE</a></li>
+          <li><a href="employer.html">EMPLOYER</a></li>
           <li><a href="donate.html">DONATE</a></li>
           <li><a href="contact.html">CONTACT</a></li>
         </ul>
@@ -283,23 +211,130 @@
    
   </section>
 
-  <section id="donate">
-    <div class="donate-container">
-      <h2>Support Us</h2>
-      <div class="donate-info">
-        <p><strong>Account No.:</strong> 50220032218342</p>
-        <p><strong>IFSC Code:</strong> BDBL0001624</p>
-        <p><strong>Account Holder:</strong> ABLED FITNESS FOUNDATION</p>
-        <p><strong>Branch:</strong> SECUNDERABAD, TELANGANA, 500003</p>
-        <p><strong>Phone No.:</strong> +91 86860 43733</p>
-      </div>
-      <div class="donate-button">
-        <button>Donate Now</button>
+<section class="text-gray-800 flex items-center justify-center min-h-screen px-4 py-12">
+
+  <!-- Decorative Background Circles -->
+  <div class="decor-circle bg-purple-400 w-72 h-72 top-[-80px] left-[-60px] sm:w-96 sm:h-96 sm:top-[-100px] sm:left-[-100px]"></div>
+  <div class="decor-circle bg-pink-400 w-56 h-56 bottom-[-60px] right-[-40px] sm:w-72 sm:h-72 sm:bottom-[-80px] sm:right-[-80px]"></div>
+
+  <!-- Decorative SVG blob -->
+  <svg class="decor-blob w-48 h-48 top-[30%] left-[80%] sm:w-64 sm:h-64 sm:top-[25%] sm:left-[85%]" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" >
+    <path fill="#c084fc" d="M44.4,-67.6C56.1,-62.1,61.3,-48.3,64.4,-36.4C67.6,-24.5,68.6,-14.5,67.4,-5.3C66.2,3.9,62.8,11.9,57,18.8C51.2,25.8,42.9,31.6,34,38.1C25,44.6,15.3,51.8,3.9,56.5C-7.5,61.2,-19.9,63.5,-28.4,58.5C-36.9,53.5,-41.5,41.3,-46.9,30.6C-52.3,20,-58.5,10,-62.2,-1.8C-66,-13.7,-67.3,-27.5,-62.8,-37.4C-58.3,-47.3,-48,-53.4,-37.1,-58.2C-26.2,-63,-13.1,-66.5,-0.6,-65.7C11.9,-64.9,23.7,-59.1,44.4,-67.6Z" transform="translate(100 100)" />
+  </svg>
+
+  <!-- Main Form Container -->
+  <section class="relative w-full max-w-md bg-white p-6 sm:p-8 rounded-3xl shadow-2xl border border-purple-200
+                  sm:max-w-lg md:max-w-xl z-10">
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-center text-purple-800 mb-8 sm:mb-10 tracking-wide">
+      Support Our Cause
+    </h1>
+
+    <!-- Donation Amount Input -->
+    <label class="block mb-4 text-gray-700 font-semibold">
+      Donation Amount (₹)
+      <input id="donationAmount" type="number" placeholder="Enter amount"
+        class="mt-2 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm
+               focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent
+               transition duration-300 text-lg sm:text-xl"
+      />
+    </label>
+
+<!-- Preset Amount Buttons -->
+<div class="flex flex-wrap gap-3 mb-8 justify-center">
+  <button onclick="setAmount(100)" id="btn100"
+    class="flex-1 min-w-[100px] px-4 py-3 bg-purple-100 text-purple-700 rounded-lg border border-purple-300
+           hover:bg-purple-200 transition duration-300 font-semibold text-lg sm:text-base"
+  >₹100</button>
+  <button onclick="setAmount(200)" id="btn200"
+    class="flex-1 min-w-[100px] px-4 py-3 bg-purple-100 text-purple-700 rounded-lg border border-purple-300
+           hover:bg-purple-200 transition duration-300 font-semibold text-lg sm:text-base"
+  >₹200</button>
+  <button onclick="setAmount(500)" id="btn500"
+    class="flex-1 min-w-[100px] px-4 py-3 bg-purple-100 text-purple-700 rounded-lg border border-purple-300
+           hover:bg-purple-200 transition duration-300 font-semibold text-lg sm:text-base"
+  >₹500</button>
+  <button onclick="setAmount(1000)" id="btn1000"
+    class="flex-1 min-w-[100px] px-4 py-3 bg-purple-100 text-purple-700 rounded-lg border border-purple-300
+           hover:bg-purple-200 transition duration-300 font-semibold text-lg sm:text-base"
+  >₹1000</button>
+  <button onclick="setAmount(2000)" id="btn2000"
+    class="flex-1 min-w-[100px] px-4 py-3 bg-purple-100 text-purple-700 rounded-lg border border-purple-300
+           hover:bg-purple-200 transition duration-300 font-semibold text-lg sm:text-base"
+  >₹2000</button>
+</div>
+
+
+    <!-- Receipt Checkbox with acknowledgment text -->
+    <div class="mb-6">
+      <label class="inline-flex items-start cursor-pointer space-x-3">
+        <input id="keepReceipt" type="checkbox"
+          class="form-checkbox h-5 w-5 mt-1 sm:h-6 sm:w-6 text-purple-600 transition duration-200"
+          onchange="toggleReceiptForm()"
+        />
+        <span class="text-gray-700 font-medium max-w-xl select-none text-sm sm:text-base">
+          Would you like to keep receipt? <br />
+          <small class="block mt-1 text-gray-600 font-normal select-text text-xs sm:text-sm">
+            I hereby acknowledge that I have willingly made a donation to Incluvate. I understand that my contribution will go towards fulfilling the needs of those in need and for the betterment of society.
+          </small>
+        </span>
+      </label>
+    </div>
+
+    <!-- Receipt Details Form (hidden by default) -->
+    <div id="receiptForm" class="hidden bg-purple-50 p-4 sm:p-5 rounded-lg border border-purple-200 mb-8 shadow-inner">
+      <div class="space-y-4">
+        <input type="text" placeholder="Name"
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg
+                 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent
+                 transition duration-300 text-base sm:text-lg"
+        />
+        <input type="text" placeholder="PAN Number"
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg
+                 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent
+                 transition duration-300 text-base sm:text-lg"
+        />
+        <input type="tel" placeholder="Contact Number"
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg
+                 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent
+                 transition duration-300 text-base sm:text-lg"
+        />
+        <textarea placeholder="Address" rows="3"
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg
+                 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent
+                 transition duration-300 resize-none text-base sm:text-lg"
+        ></textarea>
       </div>
     </div>
-    <img src="photos/donate backgroun dimage.jpeg" alt="Donate Illustration" class="donate-image">
 
-  </section>
+    <!-- Donate Button -->
+    <button
+      class="w-full bg-purple-700 text-white py-3 rounded-lg font-bold tracking-wide
+             hover:bg-purple-800 transition duration-300 shadow-lg text-lg sm:text-xl"
+    >
+      Donate
+    </button>
+
+
+    
+<!-- Bank Account Details -->
+<div class="mt-8 p-6 rounded-lg shadow-lg
+            bg-gradient-to-r from-purple-400 via-pink-400 to-red-400
+            text-white
+            sm:bg-gradient-to-r sm:from-purple-600 sm:via-pink-600 sm:to-red-600
+            dark:bg-gradient-to-r dark:from-purple-700 dark:via-pink-700 dark:to-red-700">
+  <h2 class="text-2xl font-extrabold mb-5 drop-shadow-md sm:text-3xl">Bank Account Details for Donations</h2>
+  <ul class="space-y-3 text-sm sm:text-base font-semibold drop-shadow-md">
+    <li><span class="font-bold">Account No.:</span> 50220032218342</li>
+    <li><span class="font-bold">IFSC Code:</span> BDBL0001624</li>
+    <li><span class="font-bold">Account Holder:</span> ABLED FITNESS FOUNDATION</li>
+    <li><span class="font-bold">Branch:</span> SECUNDERABAD, TELANGANA, 500003</li>
+    <li><span class="font-bold">Phone No.:</span> +91 86860 43733</li>
+  </ul>
+</div>
+</section>
+</section>
+
+ 
 
 
   
@@ -348,9 +383,31 @@
   </div>
 
   <div class="footer-bottom">
-    &copy; 2025 Abled Fitness Foundation. All rights reserved.
+    &copy; 2025 Incluvate. All rights reserved.
   </div>
 </footer>
 
+
+ <script>
+    // Toggle Receipt Details Form
+    function toggleReceiptForm() {
+      const checkbox = document.getElementById('keepReceipt');
+      const form = document.getElementById('receiptForm');
+      form.classList.toggle('hidden', !checkbox.checked);
+    }
+
+    // Donation amount buttons active state
+    const amountInput = document.getElementById('donationAmount');
+    const buttons = [100, 200, 500].map(amount => document.getElementById('btn' + amount));
+
+    function setAmount(amount) {
+      amountInput.value = amount;
+
+      buttons.forEach(btn => btn.classList.remove('active-btn'));
+
+      const activeBtn = document.getElementById('btn' + amount);
+      if (activeBtn) activeBtn.classList.add('active-btn');
+    }
+  </script>
 </body>
 </html>

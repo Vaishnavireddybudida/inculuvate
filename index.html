@@ -14,7 +14,7 @@
 <!-- Bootstrap JS Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <title>INCULUVATE</title>
+  <title>INCLUVATE</title>
   <style>
 
 
@@ -116,116 +116,6 @@
   background: linear-gradient(to bottom right, #f0f9ff, #e0e7ff);
 }
 
-/* About Section */
-.about-section {
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #e6f7ff, #ffffff);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Decorative Circles */
-.about-section::before,
-.about-section::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(47, 133, 90, 0.1);
-  z-index: 0;
-}
-
-.about-section::before {
-  width: 200px;
-  height: 200px;
-  top: -50px;
-  left: -50px;
-}
-
-.about-section::after {
-  width: 300px;
-  height: 300px;
-  bottom: -100px;
-  right: -100px;
-}
-
-.about-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  align-items: center;
-}
-
-.about-text {
-  flex: 1 1 55%;
-}
-
-.about-text h1 {
-  font-size: 42px;
-  font-family: 'Merriweather', serif;
-  color: #2f855a;
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.about-text p {
-  color: #4a4a4a;
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-
-.photo {
-  flex: 1 1 40%;
-  text-align: center;
-}
-
-.photo img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Animation */
-.slide-in {
-  animation: slideIn 1s ease-out forwards;
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-  }
-
-  .about-text,
-  .photo {
-    flex: 1 1 100%;
-    text-align: center;
-  }
-
-  .about-text h1 {
-    font-size: 32px;
-    text-align: center;
-  }
-
-  .about-text p {
-    text-align: center;
-  }
-}
 
 
 
@@ -238,13 +128,13 @@
 }
 
 
-/* Decorative Circles */
+/* Decorative Circles 
 #videos::before,
 #videos::after {
   content: "";
   position: absolute;
   border-radius: 50%;
-  background: rgba(96, 165, 250, 0.1); /* light blue glow */
+  background: rgba(96, 165, 250, 0.1); /* light blue glow 
   z-index: 0;
 }
 #videos::before {
@@ -260,7 +150,7 @@
   right: -100px;
 }
 
-/* Container */
+/* Container 
 .video-container {
   display: flex;
   flex-wrap: wrap;
@@ -270,7 +160,7 @@
   z-index: 1;
 }
 
-/* Video Box */
+/* Video Box 
 .video-box {
   aspect-ratio: 16 / 9;
   width: 100%;
@@ -295,7 +185,7 @@ video {
 }
   
 
-/* Video Tag Styling */
+/* Video Tag Styling 
 .video-box video {
   width: 100%;
   height: 100%;
@@ -304,7 +194,7 @@ video {
   border-radius: 0;
 }
 
-/* Responsive Padding */
+/* Responsive Padding 
 @media (max-width: 768px) {
   #videos {
     padding: 40px 16px;
@@ -315,7 +205,7 @@ video {
   }
 }
 
-
+*/
 
 
 
@@ -492,7 +382,7 @@ button:focus {
               <li><a href="about.html">ABOUT</a></li>
               <li><a href="jobseeker.html">JOB SEEKER</a></li>
                <li><a href="intern.html">INTERNSHIPS</a></li>
-              <li><a href="employer.html">EMPLOYEE</a></li>
+              <li><a href="employer.html">EMPLOYER</a></li>
               <li><a href="donate.html">DONATE</a></li>
               <li><a href="contact.html">CONTACT</a></li>
             </ul>
@@ -519,28 +409,11 @@ button:focus {
 
 
 
-  <!-- About Section -->
-<section class="about-section">
-  <div class="about-container">
-    <div class="photo">
-      <img src="photos/founder.jpg" alt="Nishanth Kumar Baddam">
-    </div>
-    <div class="about-text slide-in">
-      <h1>Our Founder</h1>
-      <p>
-        Nishanth Kumar Baddam, founder of Abled Fitness Foundation, is a passionate advocate for disability inclusion with firsthand experience.
-        Inspired by challenges he faced both personally and professionally at companies like Google and Amazon, he launched the foundation to
-        promote accessibility and independence. What began as a vision for an adaptive gym has grown into a broader mission of social change.
-        Nishanth now leads efforts to create equal opportunities and foster a more inclusive, barrier-free society.
-      </p>
-    </div>
-  </div>
-</section>
 
 
 
 
-
+<!---
 <section id="videos">
   <div class="video-container">
     
@@ -560,35 +433,7 @@ button:focus {
 
   </div>
 </section>
-
-
-
-
-
-
-
-<!-- Mission Section using Tailwind CSS -->
-<section class="px-6 py-12 bg-pink-50 text-gray-800">
-  
-  <div class="max-w-4xl mx-auto">
-    <h1 class="text-4xl font-bold text-purple-800 mb-4">Our Mission</h1>
-    <p class="text-xl mb-8 text-gray-700">To empower individuals with disabilities by fostering inclusivity, promoting equal opportunities, and providing access to education, healthcare, and skill development.</p>
-
-    <!-- Highlight Box 1 -->
-    <div class="bg-purple-100 border-l-4 border-purple-600 p-6 rounded-xl shadow-md mb-6">
-      <p class="text-lg font-medium text-purple-800">
-        Nishanth Kumar Baddam, founder of Abled Fitness Foundation, is a passionate advocate for disability inclusion with firsthand experience. Inspired by challenges he faced both personally and professionally at companies like Google and Amazon, he launched the foundation to promote accessibility and independence
-      </p>
-    </div>
-
-    <!-- Highlight Box 2 -->
-    <div class="bg-yellow-100 border-l-4 border-yellow-600 p-6 rounded-xl shadow-md">
-      <p class="text-lg font-medium text-yellow-800">
-        What began as a vision for an adaptive gym has grown into a broader mission of social change. Nishanth now leads efforts to create equal opportunities and foster a more inclusive, barrier-free society.
-      </p>
-    </div>
-  </div>
-</section>
+->
 
 
 
@@ -597,7 +442,24 @@ button:focus {
 
 
 
-  <!-- Alpine.js for carousel functionality 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
 <!-- Carousel Section 
